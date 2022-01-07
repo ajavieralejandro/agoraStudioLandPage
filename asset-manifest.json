@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/agoraStudioLandPage/static/css/main.a8e34faf.css",
+    "main.js": "/agoraStudioLandPage/static/js/main.e1e7ee05.js",
+    "static/js/787.637bfa3c.chunk.js": "/agoraStudioLandPage/static/js/787.637bfa3c.chunk.js",
+    "index.html": "/agoraStudioLandPage/index.html",
+    "main.a8e34faf.css.map": "/agoraStudioLandPage/static/css/main.a8e34faf.css.map",
+    "main.e1e7ee05.js.map": "/agoraStudioLandPage/static/js/main.e1e7ee05.js.map",
+    "787.637bfa3c.chunk.js.map": "/agoraStudioLandPage/static/js/787.637bfa3c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a8e34faf.css",
+    "static/js/main.e1e7ee05.js"
+  ]
+}
