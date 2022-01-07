@@ -1,0 +1,64 @@
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { CardActionArea,CardActions , Button} from '@mui/material';
+import styled from 'styled-components';
+import Grid from '@mui/material/Grid';
+
+
+const StyledCard = styled(Card)`
+-webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;background : white;
+  border-radius : 15px;
+text-align:center;
+color: black;
+&:hover{
+  background : #697D48;
+  color : white;
+  -webkit-transform: scale(1.08);  transition : 0.5s;
+  opacity : 0.9;
+}
+
+`
+
+const StyledCardMedia = styled(CardMedia)`
+border-radius: 50%;
+width:12vw; height:12vw;
+padding-top : 5%;
+
+`
+
+export default function ActionAreaCard({data}) {
+  return (
+    <StyledCard sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+      <Grid
+  container
+  direction="row"
+  justifyContent="center"
+  alignItems="center"
+>
+        <StyledCardMedia
+          component="img"
+          height="140"
+          image={data.img}
+          alt="green iguana"
+        />
+        </Grid>
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {data.nombre}
+          </Typography>
+          <Typography gutterBottom variant="body2" component="div">
+          Mei eu mollis albucius, ex nisl contentiones vix. 
+
+          </Typography>
+        </CardContent>
+        
+      </CardActionArea>
+    </StyledCard>
+  );
+}
