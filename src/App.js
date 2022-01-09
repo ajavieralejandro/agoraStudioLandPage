@@ -22,14 +22,24 @@ function App() {
     const teamList = teamSnapshot.docs.map(doc => doc.data());
     setTeam(teamList);
   }
+
+  const fetchDataWork = async ()=>{
+    const worksCol = collection(db, 'works');
+    const worksSnapshot = await getDocs(worksCol);
+    const worksList = worksSnapshot.docs.map(doc => doc.data());
+    setWorks(worksList);
+
+  }
   
   
   useEffect(() => {
     fetchData();
+    fetchDataWork();
     
   }, [])
 
   const [team, setTeam] = useState([]);
+  const [works, setWorks] = useState([]);
 
   return (
     <div>
@@ -41,7 +51,7 @@ function App() {
 
       </header>
       <Wrapper>
-      <Gallery />
+      <Gallery data={works} />
 
       <TeamPage data={team} />
 
