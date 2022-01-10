@@ -15,7 +15,7 @@ text-align : center;
 const TeamPage = ({data}) =>{
   console.log("data es : ",data);
     return(
-      <secction id="team">
+      <section id="team">
         <Container>
         <Wrapper>
              <Box sx={{ flexGrow: 1 }}>
@@ -35,7 +35,7 @@ const TeamPage = ({data}) =>{
 
         </Wrapper>
         </Container>
-        </secction>
+        </section>
     )
 }
 

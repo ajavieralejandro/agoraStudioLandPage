@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import Grid from '@mui/material/Grid';
 
 
+
 function srcset(image, width, height, rows = 1, cols = 1) {
   return {
     src: `${image}?w=${width * cols}&h=${height * rows}&fit=crop&auto=format`,
@@ -17,8 +18,14 @@ function srcset(image, width, height, rows = 1, cols = 1) {
   };
 }
 
-export default function CustomImageList({data}) {
+export default function CustomImageList({data,handleClick}) {
+  console.log("handlecLICK es :",handleClick);
+  const setImage = (img) =>{
+    console.log("img es :",img);
+    handleClick(img);
+  };
   return (
+    <section id="gallery">
     <Grid
     container
     direction="row"
@@ -26,7 +33,7 @@ export default function CustomImageList({data}) {
     alignItems="center"
   >    <ImageList
       sx={{
-        width: 900,
+        width: 800,
         height: 650,
         // Promote the list into its own layer in Chrome. This costs memory, but helps keeping high FPS.
         transform: 'translateZ(0)',
@@ -38,9 +45,9 @@ export default function CustomImageList({data}) {
         const rows = item.featured ? 2 : 1;
 
         return (
-          <ImageListItem key={item.img} cols={cols} rows={rows}>
+          <ImageListItem onClick={()=>setImage(item.img)} key={item.img} cols={cols} rows={rows}>
             <img
-              {...srcset(item.img, 400, 300, rows, cols)}
+              {...srcset(item.img, 300, 300, rows, cols)}
               alt={item.name}
               loading="lazy"
             />
@@ -67,6 +74,7 @@ export default function CustomImageList({data}) {
       })}
     </ImageList>
     </Grid>
+    </section>
   );
 }
 

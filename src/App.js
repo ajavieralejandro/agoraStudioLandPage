@@ -6,8 +6,8 @@ import TeamPage from './pages/teamPage';
 import ContactPage from './pages/contactPage/contactPage';
 import VideoPage from './pages/videoPage/videoPage';
 import Gallery from './components/gallery/gallery';
+import GalleryPage from './pages/galerryPage/galleryPage';
 import styled from 'styled-components';
-import ResponsiveImage from './components/responsiveImage/responsiveImage';
 import { collection,getDocs } from '@firebase/firestore';
 import db from '../src/firebase/firebase.config';
 
@@ -22,24 +22,14 @@ function App() {
     const teamList = teamSnapshot.docs.map(doc => doc.data());
     setTeam(teamList);
   }
-
-  const fetchDataWork = async ()=>{
-    const worksCol = collection(db, 'works');
-    const worksSnapshot = await getDocs(worksCol);
-    const worksList = worksSnapshot.docs.map(doc => doc.data());
-    setWorks(worksList);
-
-  }
-  
+ 
   
   useEffect(() => {
     fetchData();
-    fetchDataWork();
     
   }, [])
 
   const [team, setTeam] = useState([]);
-  const [works, setWorks] = useState([]);
 
   return (
     <div>
@@ -51,7 +41,7 @@ function App() {
 
       </header>
       <Wrapper>
-      <Gallery data={works} />
+      <GalleryPage />
 
       <TeamPage data={team} />
 
