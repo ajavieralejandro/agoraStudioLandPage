@@ -38,6 +38,7 @@ const Pics = styled.div`
 
 `;
 
+
 let data = [
     {
         id: '1',
@@ -72,9 +73,12 @@ let data = [
             setImage(imgSrc);
             setModal(true);
         }
+        const handleClose = () =>{
+            setModal(false);
+        }
         return(
             <>
-                <Modal visibility={modal} image={image} />
+                <Modal visibility={modal} image={image} handleClose={handleClose} />
                 <GalleryDiv>
                     {data.map((item,index)=>{
                         return(

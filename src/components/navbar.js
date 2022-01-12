@@ -67,7 +67,7 @@ const ResponsiveAppBar = () => {
 
   return (
       <ScrollToColor01>
-    <AppBar position="fixed">
+    <AppBar >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography

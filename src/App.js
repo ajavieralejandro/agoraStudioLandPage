@@ -35,11 +35,9 @@ function App() {
     <div>
    
 
-      <header className="App-header">
       <Navbar />
       <VideoPage />
 
-      </header>
       <Wrapper>
         <Gallery2 />
 
