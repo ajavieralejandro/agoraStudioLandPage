@@ -1,15 +1,23 @@
 {
   "files": {
-    "main.css": "/agoraStudioLandPage/static/css/main.a8e34faf.css",
-    "main.js": "/agoraStudioLandPage/static/js/main.e1e7ee05.js",
+    "main.css": "/agoraStudioLandPage/static/css/main.2a7f6568.css",
+    "main.js": "/agoraStudioLandPage/static/js/main.8586da84.js",
     "static/js/787.637bfa3c.chunk.js": "/agoraStudioLandPage/static/js/787.637bfa3c.chunk.js",
+    "static/media/img6.png": "/agoraStudioLandPage/static/media/img6.2876da070606d5b7c9e8.png",
+    "static/media/lento .mp4": "/agoraStudioLandPage/static/media/lento .0e16906b43b8a794eb50.mp4",
+    "static/media/img5.png": "/agoraStudioLandPage/static/media/img5.c6473944130ea64d3bc2.png",
+    "static/media/img1.png": "/agoraStudioLandPage/static/media/img1.9831544396f221df49b4.png",
+    "static/media/cel.mp4": "/agoraStudioLandPage/static/media/cel.2e52ed98db588f233f1a.mp4",
+    "static/media/img3.png": "/agoraStudioLandPage/static/media/img3.d010f8753fa43fa1c2c9.png",
+    "static/media/img2.png": "/agoraStudioLandPage/static/media/img2.804af1f45969dba4de06.png",
+    "static/media/img4.jpeg": "/agoraStudioLandPage/static/media/img4.a07a09377a3f63f81cbc.jpeg",
     "index.html": "/agoraStudioLandPage/index.html",
-    "main.a8e34faf.css.map": "/agoraStudioLandPage/static/css/main.a8e34faf.css.map",
-    "main.e1e7ee05.js.map": "/agoraStudioLandPage/static/js/main.e1e7ee05.js.map",
+    "main.2a7f6568.css.map": "/agoraStudioLandPage/static/css/main.2a7f6568.css.map",
+    "main.8586da84.js.map": "/agoraStudioLandPage/static/js/main.8586da84.js.map",
     "787.637bfa3c.chunk.js.map": "/agoraStudioLandPage/static/js/787.637bfa3c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8e34faf.css",
-    "static/js/main.e1e7ee05.js"
+    "static/css/main.2a7f6568.css",
+    "static/js/main.8586da84.js"
   ]
 }
