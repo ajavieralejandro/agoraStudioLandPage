@@ -13,6 +13,7 @@ import GalleryImage from "../../components/galleryImage/galleryImage";
 
 
 
+
 const classes = makeStyles({
     gridItem: {
       border: "1px solid red"
@@ -76,7 +77,6 @@ const GalleryPage = () => {
         const worksList = worksSnapshot.docs.map(doc => doc.data());
         setWorks(worksList);
         setImage(worksList[0].img);
-        console.log("image es : ",image);
     
       }
     
