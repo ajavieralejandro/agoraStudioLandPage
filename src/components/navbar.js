@@ -1,7 +1,6 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import styled from 'styled-components';
-import Grid from '@mui/material/Grid';  
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
@@ -9,9 +8,7 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import ScrollToColor01 from './scrollToColor/scrollToColor';
 import { Link } from 'react-scroll';
@@ -28,7 +25,7 @@ font-size : 22px;
 
 
 `;
-
+/*
 const StyledAppBar = styled(AppBar)`
 background : #697D48;
 
@@ -40,28 +37,23 @@ const StyledMenuItem = styled(MenuItem)`
 const StyledTypography = styled(Typography)`
   color :  white;
 `;
+*/
 
 const pages = ['about', 'team', 'gallery','contact'];
 //const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 
 
 
@@ -110,7 +102,7 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Link to={page} smooth={true} duration={800}><StyledMenuItem textAlign="center">{page}</StyledMenuItem ></Link>
+                  <Link to={page} smooth={true} duration={800}>{page}</Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -129,7 +121,7 @@ const ResponsiveAppBar = () => {
                 key={page}
                 onClick={handleCloseNavMenu}
               >
-                                  <Link to={page} smooth={true} duration={800}><StyledTypography textAlign="center">{page}</StyledTypography></Link>
+                                  <Link to={page} smooth={true} duration={800}>{page}</Link>
               </StyledButton>
             ))}
           </Box>

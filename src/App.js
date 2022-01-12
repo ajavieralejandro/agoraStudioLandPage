@@ -5,11 +5,10 @@ import Footer from './components/footer/footer';
 import TeamPage from './pages/teamPage';
 import ContactPage from './pages/contactPage/contactPage';
 import VideoPage from './pages/videoPage/videoPage';
-import GalleryPage from './pages/galerryPage/galleryPage';
+import GalleryPage from './pages/galleryPage2/galleryPage2';
 import styled from 'styled-components';
 import { collection,getDocs } from '@firebase/firestore';
 import db from '../src/firebase/firebase.config';
-import Gallery2 from './components/galerry2/gallery2';
 
 
 
@@ -39,7 +38,7 @@ function App() {
       <VideoPage />
 
       <Wrapper>
-        <Gallery2 />
+        <GalleryPage />
 
       <TeamPage data={team} />
 
