@@ -4,6 +4,7 @@ import TeamCard from '../components/teamCard/teamCard';
 import React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+
 const Wrapper = styled(Container)`
 padding-top: 7%;
 text-align : center;
@@ -18,13 +19,17 @@ const TeamPage = ({data}) =>{
              <Box sx={{ flexGrow: 1 }}>
              <Grid container spacing={4}>
 
+
                {data.map((partner,index)=>{
                   return(
+              
                   <Grid key={index.toString()} item xs={6} sm={4}>
-                  <TeamCard data={partner} />
-                  </Grid>);
+                      <TeamCard data={partner} />
+                  </Grid>
+);
 
                })}
+
        
       </Grid>
     </Box>

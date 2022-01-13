@@ -2,7 +2,7 @@ import { Container } from "@mui/material";
 import Gallery from "../../components/galerry2/gallery2";
 import React from "react";
 import styled from 'styled-components';
-import FadeIn from 'react-fade-in';
+import FadeIn from "../../components/animations/fadeIn";
 
 import Paper from '@mui/material/Paper';
 

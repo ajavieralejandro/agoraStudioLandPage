@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
-
+import FadeIn from '../../components/animations/fadeIn';
 
 
 const Wrapper = styled(Container)`
@@ -19,6 +19,7 @@ const AboutPage = () =>{
 
         <Wrapper>
         <Container>
+        <FadeIn>
         <Typography variant="body4" gutterBottom>
         is tenetur unde suscipit, quam beatae rerum inventore consectetur,
         neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
@@ -37,7 +38,7 @@ const AboutPage = () =>{
         quasi quidem quibusdam.body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
         blanditi
       </Typography>
-
+      </FadeIn>
         </Container>
         </Wrapper>
         </section>
