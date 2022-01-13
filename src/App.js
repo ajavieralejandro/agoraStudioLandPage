@@ -11,12 +11,23 @@ import { collection,getDocs } from '@firebase/firestore';
 import db from '../src/firebase/firebase.config';
 import Video from '../src/components/Video/Video';
 import AboutPage from './pages/about/aboutPage';
+import ParallaxPage from './pages/parallaxPage/parallaxPage';
 
 
 
 const Wrapper = styled.div`
 `
 function App() {
+
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => {setOffsetY(window.scrollY);
+                              console.log("el offset es :",offsetY
+                              );
+  }
+  useEffect(() => {
+    window.addEventListener("scroll",handleScroll);
+    return () => window.removeEventListener("scroll",handleScroll);
+  }, [])
   const fetchData = async () =>{
     const teamCol = collection(db, 'team');
     const teamSnapshot = await getDocs(teamCol);
@@ -33,7 +44,7 @@ function App() {
   const [team, setTeam] = useState([]);
 
   return (
-    <div>
+    <div >
    
 
       <Navbar />
@@ -43,10 +54,13 @@ function App() {
       <AboutPage />
 
         <GalleryPage />
+        <div style={{transform:`translateY(-${offsetY * 0,1}px)`}}>
+
       <TeamPage data={team} />
 
 
       <ContactPage />
+      </div>
       <Footer />
       </Wrapper>
       

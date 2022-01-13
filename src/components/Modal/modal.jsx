@@ -28,7 +28,7 @@ const style = {
   outline: 'none',
   borderRadius : '12px',
   p: 4,
-  ["@media (max-width:600px)"]: { width: '100%' }
+  ["@media (max-width:600px)"]: { width: '80%',height: 'auto' }
  
 };
 
@@ -36,8 +36,8 @@ const StyledImage = styled.img`
   width:80%;
   height:auto;
   @media (max-width: 6000px){
-    width : 60%;
-    height: auto;
+    width : 100%;
+    height: 100%;
   }
 
 `
