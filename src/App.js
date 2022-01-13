@@ -9,6 +9,8 @@ import GalleryPage from './pages/galleryPage2/galleryPage2';
 import styled from 'styled-components';
 import { collection,getDocs } from '@firebase/firestore';
 import db from '../src/firebase/firebase.config';
+import Video from '../src/components/Video/Video';
+import AboutPage from './pages/about/aboutPage';
 
 
 
@@ -35,11 +37,12 @@ function App() {
    
 
       <Navbar />
-      <VideoPage />
+      <Video />
 
       <Wrapper>
-        <GalleryPage />
+      <AboutPage />
 
+        <GalleryPage />
       <TeamPage data={team} />
 
 

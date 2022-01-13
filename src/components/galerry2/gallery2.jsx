@@ -32,6 +32,7 @@ const Pics = styled.div`
     transition : all 350ms ease;
     cursor : pointer;
     padding-bottom : 10px;
+    
     &:hover{
         filter : opacity(.7);
     } 
