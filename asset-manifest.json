@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/agoraStudioLandPage/static/css/main.2a7f6568.css",
-    "main.js": "/agoraStudioLandPage/static/js/main.b66aa0db.js",
+    "main.css": "/agoraStudioLandPage/static/css/main.f236b197.css",
+    "main.js": "/agoraStudioLandPage/static/js/main.d33740ec.js",
     "static/js/787.637bfa3c.chunk.js": "/agoraStudioLandPage/static/js/787.637bfa3c.chunk.js",
     "static/media/img6.png": "/agoraStudioLandPage/static/media/img6.2876da070606d5b7c9e8.png",
     "static/media/lento .mp4": "/agoraStudioLandPage/static/media/lento .0e16906b43b8a794eb50.mp4",
@@ -12,12 +12,12 @@
     "static/media/img2.png": "/agoraStudioLandPage/static/media/img2.804af1f45969dba4de06.png",
     "static/media/img4.jpeg": "/agoraStudioLandPage/static/media/img4.a07a09377a3f63f81cbc.jpeg",
     "index.html": "/agoraStudioLandPage/index.html",
-    "main.2a7f6568.css.map": "/agoraStudioLandPage/static/css/main.2a7f6568.css.map",
-    "main.b66aa0db.js.map": "/agoraStudioLandPage/static/js/main.b66aa0db.js.map",
+    "main.f236b197.css.map": "/agoraStudioLandPage/static/css/main.f236b197.css.map",
+    "main.d33740ec.js.map": "/agoraStudioLandPage/static/js/main.d33740ec.js.map",
     "787.637bfa3c.chunk.js.map": "/agoraStudioLandPage/static/js/787.637bfa3c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a7f6568.css",
-    "static/js/main.b66aa0db.js"
+    "static/css/main.f236b197.css",
+    "static/js/main.d33740ec.js"
   ]
 }
