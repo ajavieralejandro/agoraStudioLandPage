@@ -16,6 +16,13 @@ const BouncyDiv = styled.div`
   animation: 1s ${bounceAnimation};
 `;
 
+const StyledTypography = styled(Typography)`
+font-family: 'Source Code Pro', monospace;
+font-weight: bold;
+
+
+`
+
 
 const StyledCard = styled(Card)`
 -webkit-box-shadow: none;
@@ -59,13 +66,13 @@ export default function ActionAreaCard({data}) {
         />
         </Grid>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <StyledTypography gutterBottom variant="h5" component="div">
             {data.nombre}
-          </Typography>
-          <Typography gutterBottom variant="body2" component="div">
+          </StyledTypography>
+          <StyledTypography gutterBottom variant="body2" component="div">
           Mei eu mollis albucius, ex nisl contentiones vix. 
 
-          </Typography>
+          </StyledTypography>
         </CardContent>
         
       </CardActionArea>

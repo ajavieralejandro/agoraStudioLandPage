@@ -12,8 +12,8 @@ const ScrollHandler = props => {
     style: {
       backgroundColor: trigger ? "#558BAD" : "transparent",
       color: trigger ? "black" : "white",
-      transition: trigger ? "0.3s" : "0.5s",
-      fontSize : trigger ? "42px" : "49px",
+      transition: trigger ? "0.6s" : "0.6s",
+      fontSize : trigger ? "22px" : "29px",
       boxShadow: "none",
       padding: "10px 0px"
     }

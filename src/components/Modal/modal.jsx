@@ -22,7 +22,8 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '60%',
+  width: '80%',
+  height : '80%',
   bgcolor: 'background.paper',
   boxShadow: 24,
   outline: 'none',
@@ -33,12 +34,12 @@ const style = {
 };
 
 const StyledImage = styled.img`
-  width:80%;
-  height:auto;
-  @media (max-width: 6000px){
-    width : 100%;
-    height: 100%;
-  }
+width : 50%;
+height : auto;
+@media (max-width: 600px){
+  width : 100%;
+  height: auto;
+}
 
 `
 

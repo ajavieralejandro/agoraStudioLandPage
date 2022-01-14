@@ -3,6 +3,7 @@ import Gallery from "../../components/galerry2/gallery2";
 import React from "react";
 import styled from 'styled-components';
 import FadeIn from "../../components/animations/fadeIn";
+import Wrapper from "../../components/Wrapper/wrapper";
 
 import Paper from '@mui/material/Paper';
 
@@ -11,11 +12,7 @@ const StyledPaper = styled(Paper)`
     height: 200px;
 `
 
-const Wrapper = styled(Container)`
-padding-top: 6%;
-text-align : center;
-color : white;
-`
+
 
 const StyledTitle = styled.h1`
     color : white;
@@ -40,7 +37,7 @@ const GalleryPage2 = () => {
 </div>
 
 
-        </FadeIn>       
+        </FadeIn>    
 
         </Wrapper>
     </section>

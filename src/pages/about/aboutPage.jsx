@@ -9,6 +9,8 @@ import FadeIn from '../../components/animations/fadeIn';
 const Wrapper = styled(Container)`
 padding-top: 6%;
 text-align : center;
+font-family: 'Source Code Pro', monospace;
+
 color : white;
 `
 

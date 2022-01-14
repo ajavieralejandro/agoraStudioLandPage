@@ -39,6 +39,16 @@ const StyledTypography = styled(Typography)`
 `;
 */
 
+const StyledLink = styled(Link)`
+  font-family: 'Source Code Pro', monospace;
+  font-size : 18px;
+  &:hover{
+    font-weight: bold;
+    color : black;
+
+  }
+
+`;
 const pages = ['about', 'team', 'gallery','contact'];
 //const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -102,7 +112,7 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Link to={page} smooth={true} duration={800}>{page}</Link>
+                  <StyledLink to={page} smooth={true} duration={800}><p>{page}</p></StyledLink>
                 </MenuItem>
               ))}
             </Menu>
@@ -121,7 +131,7 @@ const ResponsiveAppBar = () => {
                 key={page}
                 onClick={handleCloseNavMenu}
               >
-                                  <Link to={page} smooth={true} duration={800}>{page}</Link>
+                                  <StyledLink to={page} smooth={true} duration={800}><p>{page}</p></StyledLink>
               </StyledButton>
             ))}
           </Box>
