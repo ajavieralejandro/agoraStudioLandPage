@@ -19,9 +19,9 @@ function srcset(image, width, height, rows = 1, cols = 1) {
 }
 
 export default function CustomImageList({data,handleClick}) {
-  console.log("handlecLICK es :",handleClick);
+  //console.log("handlecLICK es :",handleClick);
   const setImage = (img) =>{
-    console.log("img es :",img);
+    //console.log("img es :",img);
     handleClick(img);
   };
   return (
@@ -37,7 +37,7 @@ export default function CustomImageList({data,handleClick}) {
   cols={4}
   rowHeight={121}
 >
-  {data.map((item) => (
+  {itemData.map((item) => (
     <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
       <img
         {...srcset(item.img, 121, item.rows, item.cols)}

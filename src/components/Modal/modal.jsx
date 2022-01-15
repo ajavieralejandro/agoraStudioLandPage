@@ -18,12 +18,12 @@ color: gray;
 `
 
 const style = {
-  position: 'absolute',
+  position: 'relative',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: '80%',
-  height : '80%',
+  height : 'auto',
   bgcolor: 'background.paper',
   boxShadow: 24,
   outline: 'none',
@@ -34,8 +34,13 @@ const style = {
 };
 
 const StyledImage = styled.img`
-width : 50%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
 height : auto;
+object-fit: cover;
+overflow: hidden;
 @media (max-width: 600px){
   width : 100%;
   height: auto;
@@ -53,18 +58,12 @@ const ImageModal = ({visibility,image,handleClose}) =>{
   >
     <Box sx={style}>
      
-    <Grid
-  container
-  direction="row"
-  justifyContent="center"
-  alignItems="center"
->
+  
 <StyledIconButton onClick={()=>handleClose()}>
 
       <CloseIcon />
       </StyledIconButton>
       <StyledImage src={image} />
-      </Grid>
     </Box>
   </Modal>
   )

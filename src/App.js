@@ -19,15 +19,6 @@ const Wrapper = styled.div`
 `
 function App() {
 
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => {setOffsetY(window.scrollY);
-                              console.log("el offset es :",offsetY
-                              );
-  }
-  useEffect(() => {
-    window.addEventListener("scroll",handleScroll);
-    return () => window.removeEventListener("scroll",handleScroll);
-  }, [])
   const fetchData = async () =>{
     const teamCol = collection(db, 'team');
     const teamSnapshot = await getDocs(teamCol);
@@ -54,13 +45,11 @@ function App() {
       <AboutPage />
 
         <GalleryPage />
-        <div style={{transform:`translateY(-${offsetY * 0,1}px)`}}>
 
       <TeamPage data={team} />
 
 
       <ContactPage />
-      </div>
       <Footer />
       </Wrapper>
       

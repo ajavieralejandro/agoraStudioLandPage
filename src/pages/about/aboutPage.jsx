@@ -4,8 +4,9 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import FadeIn from '../../components/animations/fadeIn';
+import Wrapper from '../../components/Wrapper/wrapper';
 
-
+/*
 const Wrapper = styled(Container)`
 padding-top: 6%;
 text-align : center;
@@ -13,6 +14,7 @@ font-family: 'Source Code Pro', monospace;
 
 color : white;
 `
+*/
 
 const AboutPage = () =>{
   //console.log("data es : ",data);
