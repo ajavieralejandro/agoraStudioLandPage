@@ -84,7 +84,7 @@ let data = [
             Aos.init({duration:1500});
         }, [])
         return(
-            <Container>
+            <>
                 <Modal visibility={modal} image={image} handleClose={handleClose} />
                 <GalleryDiv>
                     {data.map((item,index)=>{
@@ -97,7 +97,7 @@ let data = [
                     })}
 
                 </GalleryDiv>
-            </Container>
+            </>
         )
     }
 

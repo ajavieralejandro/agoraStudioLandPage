@@ -5,6 +5,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea,CardActions , Button} from '@mui/material';
 import styled, { keyframes } from 'styled-components';
+import FlipUp from '../animations/flipUp';
+import FadeIn from 'react-fade-in/lib/FadeIn';
 
 import Grid from '@mui/material/Grid';
 
@@ -44,6 +46,7 @@ padding-top : 5%;
 
 export default function ActionAreaCard({data}) {
   return (
+    <FlipUp>
     <StyledCard sx={{ maxWidth: 345 }}>
       <CardActionArea>
       <Grid
@@ -71,5 +74,6 @@ export default function ActionAreaCard({data}) {
         
       </CardActionArea>
     </StyledCard>
+    </FlipUp>
   );
 }
