@@ -6,10 +6,10 @@ import 'aos/dist/aos.css';
 
 const FadeIn = props =>{
     useEffect(() => {
-        Aos.init({duration:1500});
+        Aos.init({duration:2500});
     }, []);
     return(
-        <div data-aos="fade-in">
+        <div data-aos="fade-up">
             {props.children}
         </div>
     )

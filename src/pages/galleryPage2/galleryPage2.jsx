@@ -2,7 +2,6 @@ import { Container } from "@mui/material";
 import Gallery from "../../components/galerry2/gallery2";
 import React from "react";
 import styled from 'styled-components';
-import FadeIn from "../../components/animations/fadeIn";
 import Wrapper from "../../components/Wrapper/wrapper";
 
 import Paper from '@mui/material/Paper';
@@ -28,7 +27,6 @@ const GalleryPage2 = () => {
   return (
     <section id="gallery">
         <Wrapper>
-        <FadeIn>
             <div>
             <StyledTitle>Our Works!</StyledTitle>
             </div>            <div>
@@ -37,7 +35,6 @@ const GalleryPage2 = () => {
 </div>
 
 
-        </FadeIn>    
 
         </Wrapper>
     </section>

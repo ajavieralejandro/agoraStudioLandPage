@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea,CardActions , Button} from '@mui/material';
 import styled, { keyframes } from 'styled-components';
 import FlipUp from '../animations/flipUp';
-import FadeIn from 'react-fade-in/lib/FadeIn';
 
 import Grid from '@mui/material/Grid';
 

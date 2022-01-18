@@ -8,8 +8,7 @@ import Img5 from '../../img/img5.png';
 import Img6 from '../../img/img6.png';
 import styled from 'styled-components';
 import Modal from '../Modal/modal';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+import FadeIn from 'react-fade-in/lib/FadeIn';
 
 
 const GalleryDiv = styled.div`
@@ -80,18 +79,18 @@ let data = [
         const handleClose = () =>{
             setModal(false);
         }
-        useEffect(() => {
-            Aos.init({duration:1500});
-        }, [])
+
         return(
             <>
                 <Modal visibility={modal} image={image} handleClose={handleClose} />
                 <GalleryDiv>
                     {data.map((item,index)=>{
                         return(
+                            <FadeIn>
                             <Pics  key={index} onClick={()=>handleClick(item.imgSrc)}>
                                 <img data-aos="fade-in" onLoad={()=>console.log("hola")} src={item.imgSrc} style={{width:'100%'}} />
                             </Pics>
+                            </FadeIn>
 
                         )
                     })}

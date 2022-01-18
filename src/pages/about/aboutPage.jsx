@@ -17,14 +17,13 @@ color : white;
 */
 
 const AboutPage = () =>{
-  //console.log("data es : ",data);
     return(
-        <FadeIn secs={10000}>
+        <FadeIn >
         <section id="about">
 
         <Wrapper>
         <Container>
-        <Typography variant="body4" gutterBottom>
+        <Typography variant="body4" style={{color:'whitesmoke'}} gutterBottom>
         is tenetur unde suscipit, quam beatae rerum inventore consectetur,
         neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
         quasi quidem quibusdam.body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
