@@ -5,16 +5,11 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea,CardActions , Button} from '@mui/material';
 import styled, { keyframes } from 'styled-components';
-import { bounce } from 'react-animations';
 
 import Grid from '@mui/material/Grid';
 
 //Style components
 
-const bounceAnimation = keyframes`${bounce}`;
-const BouncyDiv = styled.div`
-  animation: 1s ${bounceAnimation};
-`;
 
 const StyledTypography = styled(Typography)`
 font-family: 'Source Code Pro', monospace;
@@ -49,7 +44,6 @@ padding-top : 5%;
 
 export default function ActionAreaCard({data}) {
   return (
-    <BouncyDiv>
     <StyledCard sx={{ maxWidth: 345 }}>
       <CardActionArea>
       <Grid
@@ -77,6 +71,5 @@ export default function ActionAreaCard({data}) {
         
       </CardActionArea>
     </StyledCard>
-    </BouncyDiv>
   );
 }

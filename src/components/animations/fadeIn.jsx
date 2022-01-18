@@ -1,16 +1,17 @@
-import styled, { keyframes } from 'styled-components';
-import { fadeIn as bounce} from 'react-animations';
+import { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
-const bounceAnimation = keyframes`${bounce}`;
-const FadeInDiv = styled.div`
-  animation: 3s ${bounceAnimation};
-`;
+
 
 const FadeIn = props =>{
+    useEffect(() => {
+        Aos.init({duration:1500});
+    }, []);
     return(
-        <FadeInDiv>
+        <div data-aos="fade-in">
             {props.children}
-        </FadeInDiv>
+        </div>
     )
 }
 

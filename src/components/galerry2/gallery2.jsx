@@ -1,4 +1,5 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
+import { Container } from '@mui/material';
 import Img1 from '../../img/img1.png';
 import Img2 from '../../img/img2.png';
 import Img3 from '../../img/img3.png';
@@ -7,6 +8,8 @@ import Img5 from '../../img/img5.png';
 import Img6 from '../../img/img6.png';
 import styled from 'styled-components';
 import Modal from '../Modal/modal';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 
 const GalleryDiv = styled.div`
@@ -77,21 +80,24 @@ let data = [
         const handleClose = () =>{
             setModal(false);
         }
+        useEffect(() => {
+            Aos.init({duration:1500});
+        }, [])
         return(
-            <>
+            <Container>
                 <Modal visibility={modal} image={image} handleClose={handleClose} />
                 <GalleryDiv>
                     {data.map((item,index)=>{
                         return(
-                            <Pics key={index} onClick={()=>handleClick(item.imgSrc)}>
-                                <img src={item.imgSrc} style={{width:'100%'}} />
+                            <Pics  key={index} onClick={()=>handleClick(item.imgSrc)}>
+                                <img data-aos="fade-in" onLoad={()=>console.log("hola")} src={item.imgSrc} style={{width:'100%'}} />
                             </Pics>
 
                         )
                     })}
 
                 </GalleryDiv>
-            </>
+            </Container>
         )
     }
 

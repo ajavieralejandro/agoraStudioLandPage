@@ -41,12 +41,15 @@ const VideoContainer = styled.div`
 
 const VideoPage = () =>{
     console.log(Video);
-    const isMobile = useMediaQuery({ query: '(min-width: 800px)' })
+    const isMobile = useMediaQuery({ query: '(min-width: 800px)' });
+    const onVideoLoad = ()=>{
+        console.log("El video se esta cargando");
+    }
 
     return(
             <VideoContainer>{
-                isMobile?<StyledVideo src={Video} autoPlay muted loop  />
-                :<MobileVideo src={VideoCel} autoPlay muted loop  />
+                isMobile?<StyledVideo onLoad={()=>onVideoLoad()} src={Video} autoPlay muted loop  />
+                :<MobileVideo onLoad={()=>onVideoLoad()}  src={VideoCel} autoPlay muted loop  />
                  
 
             }
