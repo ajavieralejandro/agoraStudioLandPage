@@ -9,16 +9,16 @@ import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 
 const StyledIconButton = styled(IconButton)`
-position: absolute;
-left: 95%;
-top: 2%;
+
+left: 90%;
+top: -22%;
+transform: scale(1.8);
 backgroundColor: lightgray;
 color: gray;
 @media (max-width:600px){
-  left: 90%;
-top: 1%;
+  left: 98%;
+top: -5%;
 }
-
 `
 
 const style = {
@@ -28,7 +28,7 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: '80%',
   height : 'auto',
-  bgcolor: 'background.paper',
+  bgcolor: 'transparent',
   boxShadow: 24,
   outline: 'none',
   borderRadius : '12px',
@@ -51,24 +51,33 @@ overflow: hidden;
 
 `
 
+const StyledModal = styled(Modal)`
+  background : black;
+  opacity : 0.95;
+`
+
 const ImageModal = ({visibility,image,handleClose}) =>{
 
   return (
-    <Modal
+    <>
+   
+    <StyledModal styles={{background: "#FFFF00"}}
     open={visibility}
     aria-labelledby="modal-modal-title"
     aria-describedby="modal-modal-description"
   >
+    
     <Box sx={style}>
      
-  
-<StyledIconButton onClick={()=>handleClose()}>
+    <StyledIconButton  onClick={()=>handleClose()}>
 
-      <CloseIcon />
-      </StyledIconButton>
+<CloseIcon />
+</StyledIconButton>
+
       <StyledImage src={image} />
     </Box>
-  </Modal>
+  </StyledModal>
+  </>
   )
 }
 

@@ -18,9 +18,10 @@ color : white;
 
 const StyledPaper = styled.div`
   border-radius:15px;
-  text-algin : center;
-  font-size : 18px;
+  font-size : 25px;
   background : transparent;
+  text-align: justify;
+    text-justify: inter-word;
   color : white;
   &:hover{
     transition : 0.5s;
@@ -40,22 +41,7 @@ const AboutPage = () =>{
           <StyledPaper>
         
         <Typography variant="body4"  gutterBottom>
-        is tenetur unde suscipit, quam beatae rerum inventore consectetur,
-        neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
-        quasi quidem quibusdam.body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-        blanditi   is tenetur unde suscipit, quam beatae rerum inventore consectetur,
-        neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
-        quasi quidem quibusdam.body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-        blanditi   is tenetur unde suscipit, quam beatae rerum inventore consectetur,
-        neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
-        quasi quidem quibusdam.body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-        blanditi   is tenetur unde suscipit, quam beatae rerum inventore consectetur,
-        neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
-        quasi quidem quibusdam.body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-        blanditi   is tenetur unde suscipit, quam beatae rerum inventore consectetur,
-        neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
-        quasi quidem quibusdam.body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-        blanditi
+        We are a petit-studio in love with 3D and new technologies. Our team works passionately on projects ranging from 3D printing, product design, 3D animation, to augmented reality, virtual reality and video games. We really enjoy spending our hours between textures, polygons, voxels and enhancing projects, committing ourselves 100% to each development, in each work, with each design and object. We believe that leaving the screens is extremely necessary to grow as a society and as a species, that is why we are fascinated by interactivity and digital manufacturing. We have several years of experience serving innovative companies, cutting-edge studios, educational institutions, passionate artists from around the world and our own projects awarded by different organizations and institutions. We would love to hear from you, surely we can create something together beyond any expectation by accompanying you throughout the development path, your wishes are orders.
       </Typography>
       </StyledPaper>
         </Container>
