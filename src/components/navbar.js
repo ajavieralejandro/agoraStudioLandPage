@@ -42,6 +42,8 @@ const StyledTypography = styled(Typography)`
 const StyledLink = styled(Link)`
   font-family: 'Source Code Pro', monospace;
   font-size : 18px;
+  font-weight: bold;
+
   &:hover{
     font-weight: bold;
     color : black;

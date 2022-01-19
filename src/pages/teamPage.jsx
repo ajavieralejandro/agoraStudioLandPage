@@ -28,7 +28,7 @@ const TeamPage = ({data}) =>{
                {data.map((partner,index)=>{
                   return(
               
-                  <Grid key={index.toString()} item xs={6} sm={4}>
+                  <Grid key={index.toString()} item xs={6} sm={3}>
                       <TeamCard data={partner} />
                   </Grid>
 );

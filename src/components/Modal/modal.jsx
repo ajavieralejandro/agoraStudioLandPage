@@ -10,10 +10,14 @@ import IconButton from '@mui/material/IconButton';
 
 const StyledIconButton = styled(IconButton)`
 position: absolute;
-left: 90%;
-top: 1%;
+left: 95%;
+top: 2%;
 backgroundColor: lightgray;
 color: gray;
+@media (max-width:600px){
+  left: 90%;
+top: 1%;
+}
 
 `
 
@@ -35,8 +39,7 @@ const style = {
 
 const StyledImage = styled.img`
 display: block;
-margin-left: auto;
-margin-right: auto;
+margin : auto;
 width: 50%;
 height : auto;
 object-fit: cover;

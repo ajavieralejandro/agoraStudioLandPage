@@ -31,7 +31,7 @@ color: black;
   background : #697D48;
   color : white;
   -webkit-transform: scale(1.08);  transition : 0.5s;
-  opacity : 0.9;
+  opacity : 0.7;
 }
 
 `
