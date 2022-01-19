@@ -66,7 +66,7 @@ export default function ActionAreaCard({data}) {
             {data.nombre}
           </StyledTypography>
           <StyledTypography gutterBottom variant="body2" component="div">
-          Mei eu mollis albucius, ex nisl contentiones vix. 
+          {data.rol}
 
           </StyledTypography>
         </CardContent>
