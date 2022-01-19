@@ -3,8 +3,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea,CardActions , Button} from '@mui/material';
-import styled, { keyframes } from 'styled-components';
+import { CardActionArea} from '@mui/material';
+import styled from 'styled-components';
 import FlipUp from '../animations/flipUp';
 
 import Grid from '@mui/material/Grid';

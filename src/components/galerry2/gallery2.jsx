@@ -1,5 +1,4 @@
-import React,{useState,useEffect} from 'react';
-import { Container } from '@mui/material';
+import React,{useState} from 'react';
 import Img1 from '../../img/img1.png';
 import Img2 from '../../img/img2.png';
 import Img3 from '../../img/img3.png';
@@ -88,7 +87,7 @@ let data = [
                         return(
                             <FadeIn>
                             <Pics  key={index} onClick={()=>handleClick(item.imgSrc)}>
-                                <img data-aos="fade-in" onLoad={()=>console.log("hola")} src={item.imgSrc} style={{width:'100%'}} />
+                                <img alt="work-img" data-aos="fade-in" src={item.imgSrc} style={{width:'100%'}} />
                             </Pics>
                             </FadeIn>
 
