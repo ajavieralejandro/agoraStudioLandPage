@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -6,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea} from '@mui/material';
 import styled from 'styled-components';
 import FlipUp from '../animations/flipUp';
+import TeamModal from '../teamModal/teamModal';
 
 import Grid from '@mui/material/Grid';
 
@@ -44,9 +46,11 @@ padding-top : 5%;
 `
 
 export default function ActionAreaCard({data}) {
+  const [visibility, setvVsibility] = useState(false);
+  const handleClose = () => setvVsibility(false);
   return (
     <FlipUp>
-    <StyledCard sx={{ maxWidth: 345 }}>
+    <StyledCard sx={{ maxWidth: 345 }} onClick={()=>setvVsibility(true)}>
       <CardActionArea>
       <Grid
   container
@@ -73,6 +77,7 @@ export default function ActionAreaCard({data}) {
         
       </CardActionArea>
     </StyledCard>
+    <TeamModal visibility={visibility} handleClose={handleClose} data={data} />
     </FlipUp>
   );
 }

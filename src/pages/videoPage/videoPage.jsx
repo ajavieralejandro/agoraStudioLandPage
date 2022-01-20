@@ -42,8 +42,8 @@ const VideoPage = () =>{
 
     return(
             <VideoContainer>{
-                isMobile?<StyledVideo src="https://firebasestorage.googleapis.com/v0/b/agorastudio-95ded.appspot.com/o/lento%20.mp4?alt=media&token=1cff7d07-2ad2-4800-b802-dd3275a8b69a" autoPlay muted loop  />
-                :<MobileVideo src="https://firebasestorage.googleapis.com/v0/b/agorastudio-95ded.appspot.com/o/formato%20cel%20.mp4?alt=media&token=10400c7d-dc44-4608-aaad-cf9df1385a03" autoPlay muted loop  />
+                isMobile?<StyledVideo src="https://fast.wistia.com/embed/medias/u8ff6dlvq3.jsonp" autoPlay muted loop  />
+                :<MobileVideo src="https://fast.wistia.com/assets/external/E-v1.js" autoPlay muted loop  />
                  
 
             }
