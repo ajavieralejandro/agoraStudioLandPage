@@ -146,7 +146,7 @@ const teamModal = ({visibility,data,handleClose}) =>{
    
         <Typography variant="body2" color="text.secondary">
 
-          {data.bio}
+          {data.bioen}
 
         </Typography>
       </StyledCardContent>
