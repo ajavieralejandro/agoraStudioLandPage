@@ -49,25 +49,25 @@ const contactForm = () => {
 
 <Wrapper>
 
-                <Text>Contactanos : </Text>
+                <Text>Contact Us : </Text>
                 <Container>
                     <Grid container spacing={1}>
                         <Container>
                         <Grid item xs={12}>
-                            <TextField color="success" label="Nombre" variant="standard" fullWidth/>
+                            <TextField color="success" label="Name" variant="standard" fullWidth/>
                         </Grid>
                         <Grid item xs={12}>
-                            <TextField type="email" color="success" label="mail" variant="standard" fullWidth/>
+                            <TextField type="email" color="success" label="email" variant="standard" fullWidth/>
                         </Grid>
                         <Grid item xs={12}>
                             <TextField  color="success" label="Tel" placeholder="" variant="standard" fullWidth/>
                         </Grid>
                         <Grid item xs={12}>
-                            <TextField multiline rows={4} color="success" label="Mensaje"  variant="standard" fullWidth/>
+                            <TextField multiline rows={4} color="success" label="Type your message here"  variant="standard" fullWidth/>
                         </Grid>
                         <Grid item xs={12}>
                         <StyledButton variant="contained" fullWidth>
-          Enviar
+          Send Mail!
         </StyledButton>
 
                         </Grid>
