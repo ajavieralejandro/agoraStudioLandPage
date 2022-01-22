@@ -40,6 +40,16 @@ const Pics = styled.div`
 
 `;
 
+const StyledImg = styled.img`
+transition: transform 1s;
+width : 100%;   
+&:hover{
+    oppacity: 0.6;
+}
+
+
+`
+
 
 let data = [
     {
@@ -87,7 +97,7 @@ let data = [
                         return(
                             <FadeIn>
                             <Pics  key={index} onClick={()=>handleClick(item.imgSrc)}>
-                                <img alt="work-img" data-aos="fade-in" src={item.imgSrc} style={{width:'100%'}} />
+                                <StyledImg alt="work-img" data-aos="fade-in" src={item.imgSrc}  />
                             </Pics>
                             </FadeIn>
 

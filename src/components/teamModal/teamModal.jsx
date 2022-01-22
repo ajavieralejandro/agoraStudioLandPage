@@ -10,12 +10,13 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid'
+
+
 
 const StyledIconButton = styled(IconButton)`
-
-left: 90%;
-top: 12%;
-transform: scale(1.8);
+position : relative;
+display : inline-table;
 backgroundColor: lightgray;
 color: gray;
 
@@ -51,8 +52,20 @@ overflow: hidden;
 
 `
 
+const Container = styled.div`
+padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;`
+
 const StyledCard = styled(Card)`
-    max-width : 500px;
+
+  border-radius : 2%;
+    max-width : 600px;
+    max-height : 650px;
+    overflow: auto;
+
+
     @media (max-width: 600px){
         width : 300px;
       }
@@ -60,10 +73,13 @@ const StyledCard = styled(Card)`
 `
 
 const StyledCardMedia = styled(CardMedia)`
-width : 300px;
+overflow : auto;
+
+width : 100%;
 height : 300px;
+object-fit :contain;
 @media (max-width: 600px){
-    width : 150px;
+    width : 100%;
     height : 150px;
 
   }
@@ -71,6 +87,16 @@ margin : auto;
 padding-top : 5%;
 
 
+`
+
+const StyledCardContent = styled(CardContent)`
+  margin : auto;
+  padding-top : 5%;
+`
+
+const StyledTypography = styled(Typography)`
+  text-align : center;
+  font-size : 28px;
 `
 
 const StyledModal = styled(Modal)`
@@ -90,29 +116,43 @@ const teamModal = ({visibility,data,handleClose}) =>{
   >
     
     <Box sx={style}>
-
+      
+ 
 <StyledCard>
+  <Container>
+<Grid
+  container
+  direction="row"
+  justifyContent="space-between"
+  alignItems="center"
+>
+<StyledTypography gutterBottom variant="h5" component="div">
+          {data.nombre}
+        </StyledTypography>
 <StyledIconButton  onClick={()=>handleClose()}>
 
 <CloseIcon />
+
 </StyledIconButton>
       <StyledCardMedia
         component="img"
         image={data.img}
         alt="team member"
       />
-      <CardContent>
+      </Grid>
+      <StyledCardContent>
 
-        <Typography gutterBottom variant="h5" component="div">
-          {data.nombre}
-        </Typography>
+
+   
         <Typography variant="body2" color="text.secondary">
+
           {data.bio}
+
         </Typography>
-      </CardContent>
+      </StyledCardContent>
            
 
-
+      </Container>
     </StyledCard>
 
     </Box>

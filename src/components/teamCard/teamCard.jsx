@@ -9,6 +9,7 @@ import styled from 'styled-components';
 import FlipUp from '../animations/flipUp';
 import TeamModal from '../teamModal/teamModal';
 
+
 import Grid from '@mui/material/Grid';
 
 //Style components
