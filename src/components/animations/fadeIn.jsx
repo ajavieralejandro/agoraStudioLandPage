@@ -9,7 +9,7 @@ const FadeIn = props =>{
         Aos.init({duration:2500});
     }, []);
     return(
-        <div data-aos="fade-up">
+        <div data-aos="zoom-in">
             {props.children}
         </div>
     )

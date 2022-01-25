@@ -11,6 +11,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid'
+import Fade from '@material-ui/core/Fade';
+
 
 
 
@@ -59,11 +61,11 @@ margin-right: auto;
 margin-left: auto;`
 
 const StyledCard = styled(Card)`
+overflow-y: auto;
 
   border-radius : 2%;
     max-width : 600px;
     max-height : 650px;
-    overflow: auto;
 
 
     @media (max-width: 600px){
@@ -73,14 +75,12 @@ const StyledCard = styled(Card)`
 `
 
 const StyledCardMedia = styled(CardMedia)`
-overflow : auto;
-
 width : 100%;
 height : 300px;
 object-fit :contain;
 @media (max-width: 600px){
     width : 100%;
-    height : 150px;
+    height : 300px;
 
   }
 margin : auto;
@@ -95,8 +95,9 @@ const StyledCardContent = styled(CardContent)`
 `
 
 const StyledTypography = styled(Typography)`
+
   text-align : center;
-  font-size : 28px;
+  font-size : 32px;
 `
 
 const StyledModal = styled(Modal)`
@@ -114,6 +115,7 @@ const teamModal = ({visibility,data,handleClose}) =>{
     aria-labelledby="modal-modal-title"
     aria-describedby="modal-modal-description"
   >
+                    <Fade in={visibility}>
     
     <Box sx={style}>
       
@@ -144,7 +146,7 @@ const teamModal = ({visibility,data,handleClose}) =>{
 
 
    
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body4" color="text.secondary">
 
           {data.bioen}
 
@@ -156,6 +158,7 @@ const teamModal = ({visibility,data,handleClose}) =>{
     </StyledCard>
 
     </Box>
+    </Fade>
   </StyledModal>
   </>
   )

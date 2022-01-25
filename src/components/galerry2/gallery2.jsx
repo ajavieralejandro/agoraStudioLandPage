@@ -7,7 +7,7 @@ import Img5 from '../../img/img5.png';
 import Img6 from '../../img/img6.png';
 import styled from 'styled-components';
 import Modal from '../Modal/modal';
-import FadeIn from 'react-fade-in/lib/FadeIn';
+import FadeIn from '../animations/fadeIn';
 
 
 const GalleryDiv = styled.div`

@@ -11,6 +11,7 @@ import db from '../src/firebase/firebase.config';
 import Video from '../src/components/Video/Video';
 import AboutPage from './pages/about/aboutPage';
 import { query, orderBy } from "firebase/firestore";
+import CollaborationsPage from './pages/collaborationsPage/collaborationsPage';
 
 
 
@@ -46,6 +47,7 @@ function App() {
       <AboutPage />
 
         <GalleryPage />
+        <CollaborationsPage />
 
       <TeamPage data={team} />
 

@@ -5,7 +5,6 @@ import styled from "styled-components";
 import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import Gallery from "../../components/gallery/gallery";
 import { makeStyles } from '@mui/styles';
 import { collection,getDocs } from '@firebase/firestore';
 import db from '../../../src/firebase/firebase.config';
