@@ -1,9 +1,13 @@
 
-import React from 'react';
+import React,{useState} from 'react';
 import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive'
 import Video from '../../video/lento .mp4';
 import VideoCel from '../../video/cel.mp4'
+import { useReadyElement } from "@egjs/react-imready";
+import CircularProgress from '@mui/material/CircularProgress';
+
+
 
 
 const StyledVideo = styled.video`  
@@ -29,7 +33,7 @@ object-fit: cover;
 const Container = styled.div`
     height : 100vh;
     width : 100vh;
-    overflow : hidden;
+    text-align : center;
 `
 
 const VideoContainer = styled.div`
@@ -39,22 +43,28 @@ const VideoContainer = styled.div`
 
 
 
-const VideoPage = () =>{
+const VideoC = () =>{
     //console.log(Video);
     const isMobile = useMediaQuery({ query: '(min-width: 800px)' });
+    const { register, readyCount, totalCount, isReady } = useReadyElement({
+        selector: "video",
+    });
     /*const onVideoLoad = ()=>{
         console.log("El video se esta cargando");
     }*/
 
     return(
-            <VideoContainer>{
-                isMobile?<StyledVideo  src="https://firebasestorage.googleapis.com/v0/b/agorastudio-95ded.appspot.com/o/lento%20.mp4?alt=media&token=de816538-9415-4fc4-9cb2-a6c47f12aac0" autoPlay muted loop  />
-                :<MobileVideo   src="https://firebasestorage.googleapis.com/v0/b/agorastudio-95ded.appspot.com/o/cel.mp4?alt=media&token=db815308-b89a-422d-bcec-f50d924d5081" autoPlay muted loop  />
-                 
+        <>          {isReady ?   <VideoContainer>{
+            <StyledVideo src="https://firebasestorage.googleapis.com/v0/b/agorastudio-95ded.appspot.com/o/lento%20.mp4?alt=media&token=de816538-9415-4fc4-9cb2-a6c47f12aac0" autoPlay muted loop  />
+              
 
-            }
-            </VideoContainer>
+         }
+         </VideoContainer>: <Container><CircularProgress /></Container>}
+
+
+         
+            </>
     )
 }
 
-export default VideoPage;
+export default VideoC;
