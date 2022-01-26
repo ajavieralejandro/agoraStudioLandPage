@@ -12,7 +12,7 @@ import Video from '../src/components/Video/Video';
 import AboutPage from './pages/about/aboutPage';
 import { query, orderBy } from "firebase/firestore";
 import CollaborationsPage from './pages/collaborationsPage/collaborationsPage';
-
+import WistiaVideo from './components/wistiaVideo/wistiaVideo';
 
 
 
@@ -47,9 +47,9 @@ function App() {
       <AboutPage />
 
         <GalleryPage />
-        <CollaborationsPage />
 
       <TeamPage data={team} />
+      <CollaborationsPage />
 
 
       <ContactPage />

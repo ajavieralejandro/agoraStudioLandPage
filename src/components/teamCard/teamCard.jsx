@@ -8,6 +8,7 @@ import { CardActionArea} from '@mui/material';
 import styled from 'styled-components';
 import FlipUp from '../animations/flipUp';
 import TeamModal from '../teamModal/teamModal';
+import { Fade } from '@mui/material';
 
 
 import Grid from '@mui/material/Grid';
@@ -43,6 +44,7 @@ const StyledCardMedia = styled(CardMedia)`
 border-radius: 50%;
 width:12vw; height:12vw;
 padding-top : 5%;
+
 
 `
 

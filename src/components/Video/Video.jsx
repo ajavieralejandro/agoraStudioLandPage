@@ -48,8 +48,8 @@ const VideoPage = () =>{
 
     return(
             <VideoContainer>{
-                isMobile?<StyledVideo  src={Video} autoPlay muted loop  />
-                :<MobileVideo   src={VideoCel} autoPlay muted loop  />
+                isMobile?<StyledVideo  src="https://firebasestorage.googleapis.com/v0/b/agorastudio-95ded.appspot.com/o/lento%20.mp4?alt=media&token=de816538-9415-4fc4-9cb2-a6c47f12aac0" autoPlay muted loop  />
+                :<MobileVideo   src="https://firebasestorage.googleapis.com/v0/b/agorastudio-95ded.appspot.com/o/cel.mp4?alt=media&token=db815308-b89a-422d-bcec-f50d924d5081" autoPlay muted loop  />
                  
 
             }

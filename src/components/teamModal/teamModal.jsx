@@ -115,7 +115,7 @@ const teamModal = ({visibility,data,handleClose}) =>{
     aria-labelledby="modal-modal-title"
     aria-describedby="modal-modal-description"
   >
-                    <Fade in={visibility}>
+                    <Fade in={visibility} timeout={400}>
     
     <Box sx={style}>
       

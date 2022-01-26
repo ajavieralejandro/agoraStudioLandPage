@@ -2,6 +2,7 @@ import FadeIn from "../../components/animations/fadeIn";
 import styled from "styled-components";
 import React from "react";
 import { Slider } from '@lifarl/react-scroll-snap-slider';
+import Wrapper from "../../components/Wrapper/wrapper";
 
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -21,10 +22,7 @@ const StyledImg = styled.img`
     padding : 2%;
 `
 
-const Wrapper = styled.div`
-    display: inline-block;
-  
-`
+
 
 const StyledH1 = styled.h1`
 color : white;
@@ -36,7 +34,7 @@ text-align : center;
 const CollaborationsPage = () => {
   
   return (
-      <>
+      <Wrapper>
       <StyledH1>Some of our clients  </StyledH1>
 <Grid
   container
@@ -52,7 +50,7 @@ const CollaborationsPage = () => {
           <StyledImg src={img6} />
 
           </Grid>
-          </>
+          </Wrapper>
   
 
   );
