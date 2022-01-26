@@ -8,6 +8,8 @@ import Img6 from '../../img/img6.png';
 import styled from 'styled-components';
 import Modal from '../Modal/modal';
 import FadeIn from '../animations/fadeIn';
+import Image from 'material-ui-image'
+
 
 
 const GalleryDiv = styled.div`
@@ -40,7 +42,7 @@ const Pics = styled.div`
 
 `;
 
-const StyledImg = styled.img`
+const StyledImg = styled(Image)`
 transition: transform 1s;
 width : 100%;   
 &:hover{
