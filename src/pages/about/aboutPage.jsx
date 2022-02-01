@@ -17,6 +17,8 @@ color : white;
 */
 
 const StyledPaper = styled.div`
+font-family: 'Source Code Pro', monospace;
+
   border-radius:15px;
   font-size : 22px;
   background : transparent;
@@ -36,6 +38,8 @@ const StyledPaper = styled.div`
 `
 
 const StyledH1 = styled.h1`
+font-family: 'Source Code Pro', monospace;
+
 color : white;
 text-align : center;
 

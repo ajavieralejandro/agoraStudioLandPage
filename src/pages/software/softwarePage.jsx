@@ -6,6 +6,11 @@ import Wrapper from "../../components/Wrapper/wrapper";
 import { collection,getDocs } from '@firebase/firestore';
 import db from '../../firebase/firebase.config';
 import Image from "../../components/Image/Image";
+import { LazyLoadImage,trackWindowScroll } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import { Paper } from '@mui/material';
+
+
 
 
 
@@ -14,13 +19,15 @@ import Grid from '@mui/material/Grid';
 
 
 
-const StyledImg = styled(Image)`
-    width : 220px;
-    height : auto;
-    padding : 2%;
+const StyledImg = styled(LazyLoadImage)`
+  margin : auto;
+
 `
 
-
+const ImgWrap = styled(Paper)`
+  background : black;
+  margin : 2em;
+`
 
 const StyledH1 = styled.h1`
 color : white;
@@ -53,7 +60,14 @@ const SoftwarePage = () => {
 > 
         {data.map((item,index)=>{
             return(
-                <StyledImg src={item.img} alt={item.alt} key={index} />
+              <ImgWrap>
+                <StyledImg
+    alt={item.alt}
+    effect="blur"
+    src={item.img}
+    height="200px"
+    width="300px" />
+    </ImgWrap>
             )
         })}
           </Grid>
@@ -63,4 +77,4 @@ const SoftwarePage = () => {
   );
 };
 
-export default SoftwarePage;
+export default trackWindowScroll(SoftwarePage);
