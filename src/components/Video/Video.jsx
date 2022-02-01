@@ -60,6 +60,7 @@ const Wrap = styled.div`
 
 
 const VideoC = () =>{
+    const [isLoading, setIsLoading] = useState(true);
     //console.log(Video);
     const isMobile = useMediaQuery({ query: '(min-width: 800px)' });
     const { register, readyCount, totalCount, isReady } = useReadyElement({
@@ -72,11 +73,12 @@ const VideoC = () =>{
     return(
         <>          {isMobile?   <VideoContainer>
             <LazyLoad>
-            <StyledVideo  src="https://videodelivery.net/59920f588fb4e007ea97488fbc172565/downloads/default.mp4" autoPlay muted loop  />
+            {isLoading?<Spinner />:null}
+            <StyledVideo onPlaying={()=>setIsLoading(false)}  src="//videodelivery.net/59920f588fb4e007ea97488fbc172565/downloads/default.mp4" autoPlay muted loop  />
             </LazyLoad>
          
          </VideoContainer>:  <VideoContainer>{
-            <LazyLoad><StyledVideo src="https://videodelivery.net/b2be1cfddda2c4c36e135b9f56a78ed0/downloads/default.mp4" autoPlay muted loop  /></LazyLoad>
+            <LazyLoad><StyledVideo src="//videodelivery.net/b2be1cfddda2c4c36e135b9f56a78ed0/downloads/default.mp4" autoPlay muted loop  /></LazyLoad>
               
 
          }
