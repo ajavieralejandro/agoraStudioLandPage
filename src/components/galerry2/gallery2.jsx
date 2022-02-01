@@ -9,6 +9,7 @@ import styled from 'styled-components';
 import Modal from '../Modal/modal';
 import FadeIn from '../animations/fadeIn';
 import Image from 'material-ui-image'
+import { Container } from '@mui/material';
 
 
 
@@ -28,7 +29,16 @@ const GalleryDiv = styled.div`
         -moz-column-width : 100%;
         column-width : 100  %;
       }    
-`;
+`;const StyledText = styled.h1`
+display : none;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color : white;
+
+    `
+
 
 const Pics = styled.div`
     -webkit-transition : all 350ms ease;
@@ -39,19 +49,22 @@ const Pics = styled.div`
     &:hover{
         filter : opacity(.7);
     } 
+    &:hover ${StyledText} {
+        display : block;
+        transition : 3s;
+      }
 
 `;
 
-const StyledImg = styled(Image)`
-transition: transform 1s;
-width : 100%;   
-&:hover{
-    oppacity: 0.6;
-}
 
 
-`
 
+    const StyledImg = styled.img`
+    transition: transform 1s;
+    width : 100%;
+
+    
+    `
 
 let data = [
     {
@@ -95,16 +108,20 @@ let data = [
             <>
                 <Modal visibility={modal} image={image} handleClose={handleClose} />
                 <GalleryDiv>
+                    <Container>
                     {data.map((item,index)=>{
                         return(
                             <FadeIn>
                             <Pics  key={index} onClick={()=>handleClick(item.imgSrc)}>
                                 <StyledImg alt="work-img" data-aos="fade-in" src={item.imgSrc}  />
+                                <StyledText>Hola EStoy aca</StyledText>
+
                             </Pics>
                             </FadeIn>
 
                         )
                     })}
+                    </Container>
 
                 </GalleryDiv>
             </>

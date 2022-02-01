@@ -42,8 +42,8 @@ color: black;
 
 const StyledCardMedia = styled(CardMedia)`
 border-radius: 50%;
-width:12vw; height:12vw;
-padding-top : 5%;
+width:22vh; height:22vh;
+padding:1%;           
 
 
 `
@@ -53,7 +53,7 @@ export default function ActionAreaCard({data}) {
   const handleClose = () => setvVsibility(false);
   return (
     <FlipUp>
-    <StyledCard sx={{ maxWidth: 345 }} onClick={()=>setvVsibility(true)}>
+    <StyledCard sx={{ maxWidth: 345, minHeight:320 }} onClick={()=>setvVsibility(true)}>
       <CardActionArea>
       <Grid
   container
@@ -63,7 +63,6 @@ export default function ActionAreaCard({data}) {
 >
         <StyledCardMedia
           component="img"
-          height="140"
           image={data.img}
           alt="green iguana"
         />

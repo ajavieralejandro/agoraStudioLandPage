@@ -2,10 +2,15 @@
 import React,{useState} from 'react';
 import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive'
-import Video from '../../video/lento .mp4';
+import Video from '../../video/video2.mp4';
 import VideoCel from '../../video/cel.mp4'
 import { useReadyElement } from "@egjs/react-imready";
 import CircularProgress from '@mui/material/CircularProgress';
+import LazyLoad from 'react-lazyload';
+
+import Stack from '@mui/material/Stack';
+import { Player, ControlBar } from 'video-react';
+
 
 
 
@@ -37,8 +42,19 @@ const Container = styled.div`
 `
 
 const VideoContainer = styled.div`
+`
 
+const Spinner = styled(CircularProgress)`
+position: absolute;
+top: 20%;  /* position the top  edge of the element at the middle of the parent */
+left: 50%; /* position the left edge of the element at the middle of the parent */
 
+    
+`
+
+const Wrap = styled.div`
+    height : 600px;
+    width : 100%;
 `
 
 
@@ -54,12 +70,17 @@ const VideoC = () =>{
     }*/
 
     return(
-        <>          {isReady ?   <VideoContainer>{
-            <StyledVideo src="https://firebasestorage.googleapis.com/v0/b/agorastudio-95ded.appspot.com/o/lento%20.mp4?alt=media&token=de816538-9415-4fc4-9cb2-a6c47f12aac0" autoPlay muted loop  />
+        <>          {isMobile?   <VideoContainer>
+            <LazyLoad>
+            <StyledVideo  src="https://videodelivery.net/59920f588fb4e007ea97488fbc172565/downloads/default.mp4" autoPlay muted loop  />
+            </LazyLoad>
+         
+         </VideoContainer>:  <VideoContainer>{
+            <LazyLoad><StyledVideo src="https://videodelivery.net/b2be1cfddda2c4c36e135b9f56a78ed0/downloads/default.mp4" autoPlay muted loop  /></LazyLoad>
               
 
          }
-         </VideoContainer>: <Container><CircularProgress /></Container>}
+         </VideoContainer>}
 
 
          

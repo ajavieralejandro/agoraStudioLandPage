@@ -1,112 +1,145 @@
-import { Container } from "@mui/material";
-import { useEffect,useState } from 'react';
-
-import styled from "styled-components";
-import React from "react";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import { makeStyles } from '@mui/styles';
-import { collection,getDocs } from '@firebase/firestore';
-import db from '../../../src/firebase/firebase.config';
-import GalleryImage from "../../components/galleryImage/galleryImage";
-
-
-
-
-const classes = makeStyles({
-    gridItem: {
-      border: "1px solid red"
-    }
-  });
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import ButtonBase from '@mui/material/ButtonBase';
+import Typography from '@mui/material/Typography';
+import Img1 from '../../img/img1.webp';
+import Img2 from '../../img/img2.webp';
+import Img3 from '../../img/img3.webp';
+import Img4 from '../../img/img4.webp';
+import Img5 from '../../img/img5.webp';
+import Img6 from '../../img/img6.webp';
+import Wrapper from '../../components/Wrapper/wrapper';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import Modal from '../../components/Modal/modal';
 
 
-const Wrapper = styled.div`
-  margin-top: 10%;
-  margin-bottom: 5%;
-`;
+const images = [
+  {
+    url: Img1,
+    title: 'Industrial Design',
+    width: '40%',
+  },
+  {
+    url: Img2,
+    title: 'Art',
+    width: '30%',
+  },
+  {
+    url: Img3,
+    title: 'Fashion',
+    width: '30%',
+  },
+  {
+    url: Img4,
+    title: 'Biomodels',
+    width: '40%',
+  }
+];
 
-const centerContainer = styled.div`
-  font-family: arial;
-  font-size: 24px;
-  margin: 25px;
-  width: 350px;
-  height: 200px;
-  outline: dashed 1px black;
-  /* Setup */
-  position: relative;
-`;
+const ImageButton = styled(ButtonBase)(({ theme }) => ({
+  position: 'relative',
+  height: 200,
+  [theme.breakpoints.down('sm')]: {
+    width: '100% !important', // Overrides inline-style
+    height: 100,
+  },
+  '&:hover, &.Mui-focusVisible': {
+    zIndex: 1,
+    '& .MuiImageBackdrop-root': {
+      opacity: 0.15,
+    },
+    '& .MuiImageMarked-root': {
+      opacity: 0,
+    },
+    '& .MuiTypography-root': {
+      border: '4px solid currentColor',
+    },
+  },
+}));
 
-const centerChild = styled.div`
-  width: 50px;
-  height: 50px;
-  background-color: red;
-  /* Center vertically and horizontally */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -25px 0 0 -25px; /* Apply negative top and left margins to truly center the element */
-`;
+const ImageSrc = styled('span')({
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center 40%',
+});
 
-const Img = styled.img`
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-`;
+const Image = styled('span')(({ theme }) => ({
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  color: theme.palette.common.white,
+}));
 
-const StyledDiv = styled.div`
-  border: 3px solid red;
-`;
+const ImageBackdrop = styled('span')(({ theme }) => ({
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  backgroundColor: theme.palette.common.black,
+  opacity: 0.4,
+  transition: theme.transitions.create('opacity'),
+}));
 
-const StyledImg = styled.img`
-    width:400px;
-    height:auto;
-`
+const ImageMarked = styled('span')(({ theme }) => ({
+  height: 3,
+  width: 18,
+  backgroundColor: theme.palette.common.white,
+  position: 'absolute',
+  bottom: -2,
+  left: 'calc(50% - 9px)',
+  transition: theme.transitions.create('opacity'),
+}));
 
-const GalleryPage = () => {
-    const [works, setWorks] = useState([]);
-    const [image, setImage] = useState(null);
-
-    useEffect(() => {
-      fetchDataWork();
-      
-    }, []);
-    const fetchDataWork = async ()=>{
-        const worksCol = collection(db, 'works');
-        const worksSnapshot = await getDocs(worksCol);
-        const worksList = worksSnapshot.docs.map(doc => doc.data());
-        setWorks(worksList);
-        setImage(worksList[0].img);
-    
-      }
-    
+export default function ButtonBases() {
+  const [visibility, setvisibility] = React.useState(false);
   return (
-    <Container>
-    <Grid
-      container
-      direction="row"
-      justifyContent="center"
-      alignItems="center"
-    >
-          <Grid item xs={12} sm={6}>
-    <div>
-    <Gallery handleClick={setImage} data={works} />
-    </div>
-  </Grid>
-  <Grid item sm={6}>
-    
-    <Box
-        component={Grid}
-        className={classes.gridItem}
-        item
-        xs={3}
-        display={{ xs: "none", lg: "block" }}
-      >
-          {image?<GalleryImage  data={image} />:null}
-          </Box>
-  </Grid>
-    </Grid>
-    </Container>
+    <Wrapper>
+      <Modal visibility={visibility} handleClose={()=>setvisibility(false)} />
+      <h1 style={{color:'white'}}>Explore our works!</h1>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
+      {images.map((image) => (
+        <ImageButton
+          onClick={()=>setvisibility(true)}
+          focusRipple
+          key={image.title}
+          style={{
+            width: "100%",
+          }}
+        >
+          <LazyLoadComponent id={image.url} effect="blur">
+          <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
+          </LazyLoadComponent>
+          <ImageBackdrop className="MuiImageBackdrop-root" />
+          <Image>
+            <Typography
+              component="h1"
+              variant="subtitle1"
+              color="inherit"
+              sx={{
+                position: 'relative',
+                p: 6,
+                pt: 4,
+                pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+              }}
+            >
+              {image.title}
+              <ImageMarked className="MuiImageMarked-root" />
+            </Typography>
+          </Image>
+        </ImageButton>
+      ))}
+    </Box>
+    </Wrapper>
   );
-};
-
-export default GalleryPage;
+}

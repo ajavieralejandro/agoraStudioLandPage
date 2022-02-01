@@ -4,16 +4,16 @@ import Navbar from './components/navbar';
 import Footer from './components/footer/footer';
 import TeamPage from './pages/teamPage';
 import ContactPage from './pages/contactPage/contactPage';
-import GalleryPage from './pages/galleryPage2/galleryPage2';
 import styled from 'styled-components';
 import { collection,getDocs } from '@firebase/firestore';
 import db from '../src/firebase/firebase.config';
-import Video from '../src/components/Video/Video';
 import AboutPage from './pages/about/aboutPage';
 import { query, orderBy } from "firebase/firestore";
 import CollaborationsPage from './pages/collaborationsPage/collaborationsPage';
 import WistiaVideo from './components/wistiaVideo/wistiaVideo';
-
+import Video from './components/Video/Video';
+import SoftwarePage from './pages/software/softwarePage';
+import GalleryPage from './pages/galerryPage/galleryPage';
 
 
 
@@ -42,17 +42,17 @@ function App() {
 
       <Navbar />
       <Video />
-
       <Wrapper>
       <AboutPage />
-
-        <GalleryPage />
-
+      <GalleryPage />
       <TeamPage data={team} />
+      <SoftwarePage />
+
       <CollaborationsPage />
 
 
       <ContactPage />
+
       <Footer />
       </Wrapper>
       

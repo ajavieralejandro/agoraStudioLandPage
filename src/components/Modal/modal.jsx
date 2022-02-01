@@ -7,18 +7,17 @@ import { Grid } from '@mui/material';
 import styled from 'styled-components';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
+import ModalGallery from '../ModalGallery/modalGallery';
 
 const StyledIconButton = styled(IconButton)`
 
-left: 90%;
-top: -22%;
-transform: scale(1.8);
+position:absolute;
+top: -0em;
+right: 0em;
+margin: 0;
+padding: 0;
 backgroundColor: lightgray;
-color: gray;
-@media (max-width:600px){
-  left: 98%;
-top: -5%;
-}
+color: red;
 `
 
 const style = {
@@ -60,6 +59,8 @@ const ImageModal = ({visibility,image,handleClose}) =>{
 
   return (
     <>
+      
+
    
     <StyledModal styles={{background: "#FFFF00"}}
     open={visibility}
@@ -67,14 +68,24 @@ const ImageModal = ({visibility,image,handleClose}) =>{
     aria-describedby="modal-modal-description"
   >
     
+    
+    
     <Box sx={style}>
-     
-    <StyledIconButton  onClick={()=>handleClose()}>
+    <Grid
+  
+>
+<Grid item xs={12} sm={6}>
+  </Grid>
+  <Grid item xs={12} sm={6}>
+    <ModalGallery />
+
+  </Grid>
+
+  </Grid>
+    <StyledIconButton size="large" onClick={()=>handleClose()}>
 
 <CloseIcon />
 </StyledIconButton>
-
-      <StyledImage src={image} />
     </Box>
   </StyledModal>
   </>

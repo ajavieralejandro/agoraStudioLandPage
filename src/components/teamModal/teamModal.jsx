@@ -54,6 +54,11 @@ overflow: hidden;
 
 `
 
+const StyledDiv = styled.div`
+overflow-y : scroll;
+    height: 200px;
+`
+
 const Container = styled.div`
 padding-right: 15px;
 padding-left: 15px;
@@ -61,11 +66,10 @@ margin-right: auto;
 margin-left: auto;`
 
 const StyledCard = styled(Card)`
-overflow-y: auto;
 
   border-radius : 2%;
     max-width : 600px;
-    max-height : 650px;
+    max-height : 750px;
 
 
     @media (max-width: 600px){
@@ -76,7 +80,7 @@ overflow-y: auto;
 
 const StyledCardMedia = styled(CardMedia)`
 width : 100%;
-height : 300px;
+height : 400px;
 object-fit :contain;
 @media (max-width: 600px){
     width : 100%;
@@ -90,6 +94,7 @@ padding-top : 5%;
 `
 
 const StyledCardContent = styled(CardContent)`
+  
   margin : auto;
   padding-top : 5%;
 `
@@ -125,12 +130,10 @@ const teamModal = ({visibility,data,handleClose}) =>{
 <Grid
   container
   direction="row"
-  justifyContent="space-between"
+  justifyContent="flex-end"
   alignItems="center"
 >
-<StyledTypography gutterBottom variant="h5" component="div">
-          {data.nombre}
-        </StyledTypography>
+
 <StyledIconButton  onClick={()=>handleClose()}>
 
 <CloseIcon />
@@ -143,14 +146,18 @@ const teamModal = ({visibility,data,handleClose}) =>{
       />
       </Grid>
       <StyledCardContent>
+        <StyledDiv>
 
 
-   
+      <StyledTypography gutterBottom variant="h5" component="div">
+          {data.nombre}
+        </StyledTypography>
         <Typography variant="body4" color="text.secondary">
 
           {data.bioen}
 
         </Typography>
+        </StyledDiv>
       </StyledCardContent>
            
 
