@@ -29,6 +29,12 @@ const ImgWrap = styled(Paper)`
   margin : 2em;
 `
 
+const WrapperImg = styled.div`
+  margin : 2em;
+  min-width : 300px;
+  min-height : 150px;
+`
+
 const StyledH1 = styled.h1`
 color : white;
 
@@ -60,16 +66,19 @@ const SoftwarePage = () => {
 > 
         {data.map((item,index)=>{
             return(
-              <ImgWrap>
+              <WrapperImg>
                 <StyledImg
     alt={item.alt}
     effect="blur"
     src={item.img}
-    height="200px"
+    height="auto"
     width="300px" />
-    </ImgWrap>
+                </WrapperImg>
+
             )
-        })}
+
+        })
+}
           </Grid>
           </Wrapper>
   
