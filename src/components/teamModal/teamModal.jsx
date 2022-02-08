@@ -68,7 +68,7 @@ margin-left: auto;`
 const StyledCard = styled(Card)`
 
   border-radius : 2%;
-    max-width : 600px;
+    max-width : 500px;
     max-height : 750px;
 
 
@@ -110,10 +110,12 @@ const StyledModal = styled(Modal)`
   opacity : 0.99;
 `
 
+const WrapperModal = styled.div``
+
 const teamModal = ({visibility,data,handleClose}) =>{
 
   return (
-    <>
+    <WrapperModal onClick={handleClose}>
    
     <StyledModal styles={{background: "#FFFF00"}}
     open={visibility}
@@ -167,7 +169,7 @@ const teamModal = ({visibility,data,handleClose}) =>{
     </Box>
     </Fade>
   </StyledModal>
-  </>
+  </WrapperModal>
   )
 }
 
