@@ -32,6 +32,7 @@
     "react-scripts": "5.0.0",
     "react-scroll": "^1.8.4",
     "react-scroll-text": "^1.0.1",
+    "react-switch-selector": "^2.1.0",
     "react-transition-group": "^4.4.2",
     "simplebar-react": "^2.3.6",
     "stream-browserify": "^3.0.0",

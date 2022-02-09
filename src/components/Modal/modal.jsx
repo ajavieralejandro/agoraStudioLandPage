@@ -1,4 +1,4 @@
-import * as React from 'react';
+import react,{useState}  from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -8,16 +8,21 @@ import styled from 'styled-components';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import ModalGallery from '../ModalGallery/modalGallery';
+import Selector from '../selector/selector';
+import { Paper } from '@mui/material';
+import Img1 from '../../img/img1.webp';
+
+
 
 const StyledIconButton = styled(IconButton)`
 
 position:absolute;
-top: -0em;
+top: -3em;
 right: 0em;
 margin: 0;
 padding: 0;
 backgroundColor: lightgray;
-color: red;
+color: grey;
 `
 
 const style = {
@@ -39,8 +44,9 @@ const style = {
 const StyledImage = styled.img`
 display: block;
 margin : auto;
-width: 50%;
-height : auto;
+border-radius: 0.5em;
+width: 600px;
+height : 650px;
 object-fit: cover;
 overflow: hidden;
 @media (max-width: 600px){
@@ -51,12 +57,29 @@ overflow: hidden;
 `
 
 const StyledModal = styled(Modal)`
+  padding : auto;
+  margin: auto;
+  @media (max-width: 600px){
+    overflow-y : scroll;
+    padding-top:100%;
+
+
+
+  }
   background : black;
   opacity : 0.95;
 `
 
-const ImageModal = ({visibility,image,handleClose}) =>{
+const Wrapper = styled.div`
+  padding-top:2%;
+`
+const Wrapper2 = styled.div`
+  padding-top:-10%;
+`
 
+const ImageModal = ({visibility,handleClose}) =>{
+
+  const [image, setImage] = useState(Img1);
   return (
     <>
       
@@ -71,21 +94,26 @@ const ImageModal = ({visibility,image,handleClose}) =>{
     
     
     <Box sx={style}>
-    <Grid
+    <Selector />
+<Wrapper>
+    <Grid container spacing={1}>
   
->
-<Grid item xs={12} sm={6}>
+<Grid  item xs={12} sm={6}>
+    <div>
+      <StyledImage src={image} />
+    </div>
   </Grid>
   <Grid item xs={12} sm={6}>
-    <ModalGallery />
+  <div>
+<ModalGallery handleImage={setImage} />
+</div>
 
   </Grid>
 
   </Grid>
-    <StyledIconButton size="large" onClick={()=>handleClose()}>
 
-<CloseIcon />
-</StyledIconButton>
+</Wrapper>
+
     </Box>
   </StyledModal>
   </>
