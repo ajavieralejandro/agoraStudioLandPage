@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useRef } from 'react';
 import { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -9,6 +10,8 @@ import styled from 'styled-components';
 import FlipUp from '../animations/flipUp';
 import TeamModal from '../teamModal/teamModal';
 import { Fade } from '@mui/material';
+
+
 
 
 import Grid from '@mui/material/Grid';
@@ -51,6 +54,8 @@ padding:1%;
 const ModalWrapper = styled.div``;
 
 export default function ActionAreaCard({data}) {
+
+
   const [visibility, setvVsibility] = useState(false);
   const handleClose = () => setvVsibility(false);
   return (
@@ -82,8 +87,11 @@ export default function ActionAreaCard({data}) {
       </CardActionArea>
     </StyledCard>
     <ModalWrapper >
+   
     <TeamModal   visibility={visibility} handleClose={handleClose} data={data} />
+
     </ModalWrapper>
+
     </FlipUp>
   );
 }

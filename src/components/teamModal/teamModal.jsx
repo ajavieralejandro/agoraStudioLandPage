@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { useRef } from 'react';
+
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import styled from 'styled-components';
@@ -12,6 +14,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid'
 import Fade from '@material-ui/core/Fade';
+import useClickOutside from '../../hooks/useClickOutside';
+
 
 
 
@@ -115,9 +119,12 @@ const WrapperModal = styled.div``
 
 
 const TeamModal = ({visibility,data,handleClose}) =>{
+  const ref = useRef(null);
+  useClickOutside(ref, ()=>handleClose(false));
 
   return (
 
+    
     <WrapperModal>
 
 
@@ -133,7 +140,7 @@ const TeamModal = ({visibility,data,handleClose}) =>{
     <Box sx={style}>
 
  
-<StyledCard>
+<StyledCard ref={ref} >
   <Container>
 <Grid
   container
@@ -176,10 +183,10 @@ const TeamModal = ({visibility,data,handleClose}) =>{
     </Box>
 
 
+
   </StyledModal>
 
   </WrapperModal>
-
   )
 };
 
