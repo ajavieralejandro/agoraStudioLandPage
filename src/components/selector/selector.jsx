@@ -7,22 +7,22 @@ const Selector = () =>{
             value: {
                  foo: true
             },
-            selectedBackgroundColor: "#0097e6",
+            selectedBackgroundColor: "#697d48",
         },
         {
             label: "Design",
             value: "bar",
-            selectedBackgroundColor: "#fbc531"
+            selectedBackgroundColor: "#697d48"
         },
         {
             label: "Fashion",
             value: "bar",
-            selectedBackgroundColor: "#fbc531"
+            selectedBackgroundColor: "#697d48"
         },
         {
             label: "Biomodels",
             value: "bar",
-            selectedBackgroundColor: "#fbc531"
+            selectedBackgroundColor: "#697d48"
         }
      ];
      

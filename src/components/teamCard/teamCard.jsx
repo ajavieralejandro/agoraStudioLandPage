@@ -48,6 +48,8 @@ padding:1%;
 
 `
 
+const ModalWrapper = styled.div``;
+
 export default function ActionAreaCard({data}) {
   const [visibility, setvVsibility] = useState(false);
   const handleClose = () => setvVsibility(false);
@@ -79,7 +81,9 @@ export default function ActionAreaCard({data}) {
         
       </CardActionArea>
     </StyledCard>
-    <TeamModal visibility={visibility} handleClose={handleClose} data={data} />
+    <ModalWrapper >
+    <TeamModal   visibility={visibility} handleClose={handleClose} data={data} />
+    </ModalWrapper>
     </FlipUp>
   );
 }

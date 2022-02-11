@@ -37,6 +37,7 @@ const images = [
   }
 ];
 
+
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
   height: 250,
@@ -101,11 +102,12 @@ const ImageMarked = styled('span')(({ theme }) => ({
   transition: theme.transitions.create('opacity'),
 }));
 
+
 export default function ButtonBases() {
   const [visibility, setvisibility] = React.useState(false);
   return (
     <Wrapper>
-      <Modal visibility={visibility} handleClose={()=>setvisibility(false)} />
+      <Modal  visibility={visibility} handleClose={()=>setvisibility(false)} />
       <h1 style={{color:'white'}}>Explore our works!</h1>
     <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
       {images.map((image) => (

@@ -16,6 +16,7 @@ import Fade from '@material-ui/core/Fade';
 
 
 
+
 const StyledIconButton = styled(IconButton)`
 position : relative;
 display : inline-table;
@@ -112,20 +113,25 @@ const StyledModal = styled(Modal)`
 
 const WrapperModal = styled.div``
 
-const teamModal = ({visibility,data,handleClose}) =>{
+
+const TeamModal = ({visibility,data,handleClose}) =>{
 
   return (
-    <WrapperModal onClick={handleClose}>
+
+    <WrapperModal>
+
+
    
     <StyledModal styles={{background: "#FFFF00"}}
     open={visibility}
     aria-labelledby="modal-modal-title"
     aria-describedby="modal-modal-description"
   >
-                    <Fade in={visibility} timeout={400}>
+
+
     
     <Box sx={style}>
-      
+
  
 <StyledCard>
   <Container>
@@ -166,11 +172,15 @@ const teamModal = ({visibility,data,handleClose}) =>{
       </Container>
     </StyledCard>
 
-    </Box>
-    </Fade>
-  </StyledModal>
-  </WrapperModal>
-  )
-}
 
-export default teamModal;
+    </Box>
+
+
+  </StyledModal>
+
+  </WrapperModal>
+
+  )
+};
+
+export default TeamModal;

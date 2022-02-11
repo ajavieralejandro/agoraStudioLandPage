@@ -11,18 +11,22 @@ import ModalGallery from '../ModalGallery/modalGallery';
 import Selector from '../selector/selector';
 import { Paper } from '@mui/material';
 import Img1 from '../../img/img1.webp';
+import FadeIn from 'react-fade-in/lib/FadeIn';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
+import { Close } from '@material-ui/icons';
+
 
 
 
 const StyledIconButton = styled(IconButton)`
 
 position:absolute;
-top: -3em;
+top: 0em;
 right: 0em;
 margin: 0;
 padding: 0;
 backgroundColor: lightgray;
-color: grey;
+color: #558BAD;
 `
 
 const style = {
@@ -81,21 +85,30 @@ const ImageModal = ({visibility,handleClose}) =>{
 
   const [image, setImage] = useState(Img1);
   return (
-    <>
+    <div>
       
 
+   <FadeIn>
    
-    <StyledModal styles={{background: "#FFFF00"}}
+    <StyledModal styles={{background: "#558BAD"}}
     open={visibility}
     aria-labelledby="modal-modal-title"
     aria-describedby="modal-modal-description"
   >
     
+   
     
     
     <Box sx={style}>
+    <StyledIconButton onClick={()=>handleClose(false)} >
+       <CloseIcon />
+       </StyledIconButton>
+
     <Selector />
 <Wrapper>
+
+
+ 
     <Grid container spacing={1}>
   
 <Grid  item xs={12} sm={6}>
@@ -116,7 +129,8 @@ const ImageModal = ({visibility,handleClose}) =>{
 
     </Box>
   </StyledModal>
-  </>
+  </FadeIn>
+  </div>
   )
 }
 
