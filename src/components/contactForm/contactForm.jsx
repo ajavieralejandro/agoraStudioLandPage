@@ -4,7 +4,19 @@ import { Typography,Card,CardContent,Grid,Button } from '@mui/material';
 import styled from 'styled-components';
 import { Container } from '@mui/material';
 import Paper from '@mui/material/Paper';
+import emailjs from 'emailjs-com';
 
+const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_9dgk7kn', 'template_svd3zpd', e.target, 'user_KRxr45LRpsTkhXElJp8Wx')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+  };
 
 
 
@@ -51,23 +63,25 @@ const contactForm = () => {
 <Wrapper>
 
                 <Text>Contact Us : </Text>
+                <form onSubmit={e=>sendEmail(e)}>
                 <Container>
                     <Grid container spacing={1}>
                         <Container>
                         <Grid item xs={12}>
-                            <TextField color="success" label="Name" variant="standard" fullWidth/>
+                            <TextField color="success" label="Name" name="name" variant="standard" fullWidth/>
                         </Grid>
                         <Grid item xs={12}>
-                            <TextField type="email" color="success" label="email" variant="standard" fullWidth/>
+                            <TextField type="email" color="success" name="email" label="email" variant="standard" fullWidth/>
                         </Grid>
                         <Grid item xs={12}>
-                            <TextField  color="success" label="Tel" placeholder="" variant="standard" fullWidth/>
+                            <TextField  color="success" label="Tel" name="tel" placeholder="" variant="standard" fullWidth/>
                         </Grid>
                         <Grid item xs={12}>
-                            <TextField multiline rows={4} color="success" label="Type your message here"  variant="standard" fullWidth/>
+                            <TextField multiline rows={4} color="success" name="message" label="Type your message here"  variant="standard" fullWidth/>
                         </Grid>
                         <Grid item xs={12}>
-                        <StyledButton variant="contained" fullWidth>
+                        <StyledButton         type="submit"
+ variant="contained" fullWidth>
           Send Mail!
         </StyledButton>
 
@@ -76,6 +90,7 @@ const contactForm = () => {
 
                     </Grid>
                     </Container>
+                    </form>
 
                 </Wrapper>
 

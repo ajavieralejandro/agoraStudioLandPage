@@ -12,7 +12,6 @@ import Selector from '../selector/selector';
 import { Paper } from '@mui/material';
 import Img1 from '../../img/img1.webp';
 import FadeIn from 'react-fade-in/lib/FadeIn';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
 import { Close } from '@material-ui/icons';
 
 
