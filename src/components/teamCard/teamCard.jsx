@@ -43,9 +43,7 @@ color: black;
 `
 
 const StyledCardMedia = styled(CardMedia)`
-border-radius: 50%;
-width:22vh; height:22vh;
-padding:1%;           
+width:100%; height:22vh;
 
 
 `

@@ -7,6 +7,7 @@ import Footer from './components/footer/footer';
 import TeamPage from './pages/teamPage';
 import ContactPage from './pages/contactPage/contactPage';
 import styled from 'styled-components';
+import { Container } from '@mui/material';
 import { collection,getDocs } from '@firebase/firestore';
 import db from '../src/firebase/firebase.config';
 import AboutPage from './pages/about/aboutPage';
@@ -45,6 +46,7 @@ function App() {
       <Navbar />
       <Video />
       <Wrapper>
+        <Container>
       <AboutPage />
       <GalleryPage />
       <TeamPage data={team} />
@@ -54,6 +56,7 @@ function App() {
 
 
       <ContactPage />
+      </Container>
 
       <Footer />
       </Wrapper>

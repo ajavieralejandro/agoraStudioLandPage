@@ -1,9 +1,11 @@
 import react,{useState}  from 'react';
 import Box from '@mui/material/Box';
+import { useRef } from 'react';
+
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { Grid } from '@mui/material';
+import { Container, Grid } from '@mui/material';
 import styled from 'styled-components';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
@@ -12,8 +14,9 @@ import Selector from '../selector/selector';
 import { Paper } from '@mui/material';
 import Img1 from '../../img/img1.webp';
 import FadeIn from 'react-fade-in/lib/FadeIn';
-import { Close } from '@material-ui/icons';
+import useClickOutside from '../../hooks/useClickOutside';
 
+import { Close } from '@material-ui/icons';
 
 
 
@@ -33,23 +36,25 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
+  marginTop: "7%",
   width: '80%',
-  height : 'auto',
+  height : '100%',
   bgcolor: 'transparent',
   boxShadow: 24,
   outline: 'none',
   borderRadius : '12px',
   p: 4,
-  ["@media (max-width:600px)"]: { width: '80%',height: 'auto' }
  
 };
 
 const StyledImage = styled.img`
-display: block;
+display: flex;
 margin : auto;
 border-radius: 0.5em;
-width: 600px;
-height : 650px;
+padding-top : 5%;
+
+max-width: 500px;
+height : 100%;
 object-fit: cover;
 overflow: hidden;
 @media (max-width: 600px){
@@ -62,9 +67,9 @@ overflow: hidden;
 const StyledModal = styled(Modal)`
   padding : auto;
   margin: auto;
+  overflow-y : auto;
+
   @media (max-width: 600px){
-    overflow-y : scroll;
-    padding-top:100%;
 
 
 
@@ -74,13 +79,15 @@ const StyledModal = styled(Modal)`
 `
 
 const Wrapper = styled.div`
-  padding-top:2%;
+  width:100%;
 `
 const Wrapper2 = styled.div`
   padding-top:-10%;
 `
 
 const ImageModal = ({visibility,handleClose}) =>{
+  const ref = useRef(null);
+  useClickOutside(ref, ()=>handleClose(false));
 
   const [image, setImage] = useState(Img1);
   return (
@@ -98,7 +105,7 @@ const ImageModal = ({visibility,handleClose}) =>{
    
     
     
-    <Box sx={style}>
+    <Box ref={ref} sx={style}>
     <StyledIconButton onClick={()=>handleClose(false)} >
        <CloseIcon />
        </StyledIconButton>
@@ -108,14 +115,14 @@ const ImageModal = ({visibility,handleClose}) =>{
 
 
  
-    <Grid container spacing={1}>
+    <Grid container justify="space-around"  spacing={4}>
   
-<Grid  item xs={12} sm={6}>
+<Grid  item  sm={12} md={6}>
     <div>
       <StyledImage src={image} />
     </div>
   </Grid>
-  <Grid item xs={12} sm={6}>
+  <Grid item sm={12} md={6}>
   <div>
 <ModalGallery handleImage={setImage} />
 </div>

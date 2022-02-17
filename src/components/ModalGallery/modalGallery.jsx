@@ -39,6 +39,8 @@ export default function TitlebarImageList({handleImage}) {
       <Box
         sx={{
           height: 650,
+          marginTop:"5%",
+          width:'100%',
           backgroundColor: "pink",
           display: "grid",
           gridTemplateColumns: {
