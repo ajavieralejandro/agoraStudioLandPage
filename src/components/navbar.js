@@ -11,7 +11,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import ScrollToColor01 from './scrollToColor/scrollToColor';
-import { Link } from 'react-scroll';
+import { Link,animateScroll as scroll } from 'react-scroll';
 
 const StyledButton = styled(Button)`
 text-align: center;
@@ -25,6 +25,7 @@ font-size : 22px;
 
 
 `;
+
 /*
 const StyledAppBar = styled(AppBar)`
 background : #697D48;
@@ -51,6 +52,8 @@ const StyledLink = styled(Link)`
 `;
 const pages = ['about', 'team', 'gallery','contact'];
 //const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const scrollToTop = () => 
+   scroll.scrollToTop();
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -76,10 +79,12 @@ const ResponsiveAppBar = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'inline-flex' } }}
+            onClick={()=>scrollToTop()}
+            sx={{ mr: 2, display: { cursor:'pointer',xs: 'none', md: 'inline-flex' } }}
           >
+   
             AgoraStudio
-          </Typography>
+          </Typography>          
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, textAlign:'center' }}>
             <IconButton

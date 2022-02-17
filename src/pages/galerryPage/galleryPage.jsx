@@ -106,6 +106,7 @@ const ImageMarked = styled('span')(({ theme }) => ({
 export default function ButtonBases() {
   const [visibility, setvisibility] = React.useState(false);
   return (
+    <section id="gallery">
     <Wrapper>
       <Modal  visibility={visibility} handleClose={()=>setvisibility(false)} />
       <h1 style={{color:'white'}}>Explore our works!</h1>
@@ -143,5 +144,6 @@ export default function ButtonBases() {
       ))}
     </Box>
     </Wrapper>
+    </section>
   );
 }

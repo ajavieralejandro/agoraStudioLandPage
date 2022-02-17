@@ -21,7 +21,6 @@ import { Close } from '@material-ui/icons';
 
 
 const StyledIconButton = styled(IconButton)`
-
 position:absolute;
 top: 0em;
 right: 0em;
@@ -52,27 +51,21 @@ display: flex;
 margin : auto;
 border-radius: 0.5em;
 padding-top : 5%;
-
 max-width: 500px;
-height : 100%;
+height : auto;
 object-fit: cover;
 overflow: hidden;
 @media (max-width: 600px){
   width : 100%;
   height: auto;
 }
-
 `
 
 const StyledModal = styled(Modal)`
   padding : auto;
   margin: auto;
   overflow-y : auto;
-
   @media (max-width: 600px){
-
-
-
   }
   background : black;
   opacity : 0.95;
@@ -118,9 +111,13 @@ const ImageModal = ({visibility,handleClose}) =>{
     <Grid container justify="space-around"  spacing={4}>
   
 <Grid  item  sm={12} md={6}>
-    <div>
-      <StyledImage src={image} />
-    </div>
+<Grid
+  container
+  direction="row"
+  justifyContent="center"
+  alignItems="center"
+>      <StyledImage src={image} />
+    </Grid>
   </Grid>
   <Grid item sm={12} md={6}>
   <div>
