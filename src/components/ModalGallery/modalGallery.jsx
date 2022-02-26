@@ -66,19 +66,7 @@ export default function TitlebarImageList({handleImage}) {
               alt={item.title}
               loading="lazy"
             />
-            <Wrapper
-              title={item.title}
-              subtitle={item.author}
-              // position="below"
-              actionIcon={
-                <IconButton
-                  sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                  aria-label={`info about ${item.title}`}
-                >
-                  <InfoIcon />
-                </IconButton>
-              }
-            />
+        
           </ImageListItem>
         ))}
         
@@ -92,8 +80,7 @@ const itemData = [
   {
     img: Img1,
     id:'1',
-    title: "Boots",
-    author: "@bkristastucchio",
+ 
     rows: 2,
     cols: 2,
     featured: true
@@ -101,43 +88,37 @@ const itemData = [
   {
     img: Img2,
     id:'2',
-    title: "Japanese",
-    author: "@rollelflex_graphy726"
+ 
   },
   {
     img: Img3,
     id:'3',
-    title: "Dress",
-    author: "@helloimnik"
+
   },
   {
     img: Img4,
     id:'4',
-    title: "Abstract",
-    author: "@nolanissac",
+  
     cols: 2
   },
   {
     img: Img5,
     id:'5',
-    title: "Boots2",
-    author: "@hjrc33",
+
     cols: 2
   },
   {
     img: Img6,
     id:'6',
-    title: "Honey",
-    author: "@arwinneil",
+ 
     rows: 2,
     cols: 2,
     featured: true
   },
   {
     img: Img1,
-    title: "Breakfast",
     id:'7',
-    author: "@bkristastucchio",
+
     rows: 2,
     cols: 2,
     featured: true
@@ -145,8 +126,7 @@ const itemData = [
   {
     img: Img2,
     id:'8',
-    title: "Burger",
-    author: "@rollelflex_graphy726"
+
   },
   
 ];
