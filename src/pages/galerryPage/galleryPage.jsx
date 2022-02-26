@@ -3,6 +3,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
+import Vid from '../../video/walk.mp4';
 import Img1 from '../../img/img1.webp';
 import Img2 from '../../img/img2.webp';
 import Img3 from '../../img/img3.webp';
@@ -12,6 +13,9 @@ import Img6 from '../../img/img6.webp';
 import Wrapper from '../../components/Wrapper/wrapper';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import Modal from '../../components/Modal/modal';
+
+
+
 
 
 const images = [
@@ -92,6 +96,12 @@ const ImageBackdrop = styled('span')(({ theme }) => ({
   transition: theme.transitions.create('opacity'),
 }));
 
+const StyledVideo = styled('video')(({ theme }) => ({
+  width : '60%',
+  height : 'auto',
+  transition: theme.transitions.create('opacity'),
+}));
+
 const ImageMarked = styled('span')(({ theme }) => ({
   height: 3,
   width: 18,
@@ -108,8 +118,11 @@ export default function ButtonBases() {
   return (
     <section id="gallery">
     <Wrapper>
+    <StyledVideo autoPlay muted loop    src="https://videodelivery.net/de698206a730478376818dc195a0b88e/downloads/default.mp4" />
+
       <Modal  visibility={visibility} handleClose={()=>setvisibility(false)} />
       <h1 style={{color:'white'}}>Explore our works!</h1>
+      
     <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
       {images.map((image) => (
         <ImageButton

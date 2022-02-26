@@ -13,7 +13,6 @@ import db from '../src/firebase/firebase.config';
 import AboutPage from './pages/about/aboutPage';
 import { query, orderBy } from "firebase/firestore";
 import CollaborationsPage from './pages/collaborationsPage/collaborationsPage';
-import WistiaVideo from './components/wistiaVideo/wistiaVideo';
 import Video from './components/Video/Video';
 import SoftwarePage from './pages/software/softwarePage';
 import GalleryPage from './pages/galerryPage/galleryPage';
