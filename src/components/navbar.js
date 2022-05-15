@@ -17,7 +17,7 @@ const StyledButton = styled(Button)`
 text-align: center;
 color: white;
 cursor: 'point';
-font-size : 22px;
+font-size : 16  px;
 &:hover {
   -webkit-transform: scale(1.08);  transition : 0.5s;
   
@@ -42,10 +42,11 @@ const StyledTypography = styled(Typography)`
 
 const StyledLink = styled(Link)`
   font-family: 'Source Code Pro', monospace;
-  font-size : 22px;
+  font-size : 16px;
 
   &:hover{
     font-weight: bold;
+    color : whitesmoke;
 
   }
 
@@ -83,7 +84,7 @@ const ResponsiveAppBar = () => {
             sx={{ mr: 2, display: { cursor:'pointer',xs: 'none', md: 'inline-flex' } }}
           >
    
-            AgoraStudio
+            Agora3DStudio
           </Typography>          
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, textAlign:'center' }}>
@@ -130,7 +131,7 @@ const ResponsiveAppBar = () => {
           >
           </Typography>
           
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' },float:'right' }}>
             {pages.map((page) => (
               <StyledButton
                 key={page}

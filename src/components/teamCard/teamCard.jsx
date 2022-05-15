@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea} from '@mui/material';
 import styled from 'styled-components';
-import FlipUp from '../animations/flipUp';
+import FlipUp from '../animations/fadeIn';
 import TeamModal from '../teamModal/teamModal';
 import { Fade } from '@mui/material';
 
@@ -32,7 +32,7 @@ const StyledCard = styled(Card)`
   box-shadow: none;background : white;
   border-radius : 15px;
 text-align:center;
-color: black;
+color: white;
 &:hover{
   background : #697D48;
   color : white;
@@ -57,7 +57,7 @@ export default function ActionAreaCard({data}) {
   const handleClose = () => setvVsibility(false);
   return (
     <FlipUp>
-    <StyledCard sx={{ maxWidth: 345, minHeight:320 }} onClick={()=>setvVsibility(true)}>
+    <StyledCard style={{backgroundColor: "transparent"}} sx={{ maxWidth: 345, minHeight:320 }} onClick={()=>setvVsibility(true)}>
       <CardActionArea>
       <Grid
   container

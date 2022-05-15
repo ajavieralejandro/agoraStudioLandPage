@@ -5,7 +5,9 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import Wrapper from '../../components/Wrapper/wrapper';
 import FadeIn from '../../components/animations/fadeIn';
-
+import { Grid } from '@mui/material';
+import { styled as styled2 } from '@mui/material/styles';
+import GalleryPage from '../galerryPage/galleryPage';
 /*
 const Wrapper = styled(Container)`
 padding-top: 6%;
@@ -20,7 +22,7 @@ const StyledPaper = styled.div`
 font-family: 'Source Code Pro', monospace;
 
   border-radius:15px;
-  font-size : 22px;
+  font-size : 24px;
   background : transparent;
   text-align: justify;
     text-justify: inter-word;
@@ -50,14 +52,22 @@ const StyledTypography = styled.h1`
 
 `
 
+const StyledVideo = styled2('video')(({ theme }) => ({
+  width : '100%',
+  height : 'auto',
+}));
+
 
 const AboutPage = () =>{
     return(
         <FadeIn >
         <section id="about">
+          <Grid container>
+            <Grid item sm={6}>
+              <GalleryPage />
 
-
-        <Wrapper>
+            </Grid>
+            <Grid item sm={6}>
         <StyledH1>Agora Studio</StyledH1>
 
       
@@ -70,7 +80,12 @@ const AboutPage = () =>{
       </Typography>
       </StyledPaper>
         </Container>
-        </Wrapper>
+            </Grid>
+
+          </Grid>
+
+
+    
         </section>
         </FadeIn>
 

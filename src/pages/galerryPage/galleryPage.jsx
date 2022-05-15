@@ -96,11 +96,7 @@ const ImageBackdrop = styled('span')(({ theme }) => ({
   transition: theme.transitions.create('opacity'),
 }));
 
-const StyledVideo = styled('video')(({ theme }) => ({
-  width : '60%',
-  height : 'auto',
-  transition: theme.transitions.create('opacity'),
-}));
+
 
 const ImageMarked = styled('span')(({ theme }) => ({
   height: 3,
@@ -118,7 +114,6 @@ export default function ButtonBases() {
   return (
     <section id="gallery">
     <Wrapper>
-    <StyledVideo autoPlay muted loop    src="https://videodelivery.net/de698206a730478376818dc195a0b88e/downloads/default.mp4" />
 
       <Modal  visibility={visibility} handleClose={()=>setvisibility(false)} />
       <h1 style={{color:'white'}}>Explore our works!</h1>

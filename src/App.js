@@ -45,9 +45,7 @@ function App() {
       <Navbar />
       <Video />
       <Wrapper>
-        <Container>
       <AboutPage />
-      <GalleryPage />
       <TeamPage data={team} />
       <SoftwarePage />
 
@@ -55,7 +53,6 @@ function App() {
 
 
       <ContactPage />
-      </Container>
 
       <Footer />
       </Wrapper>

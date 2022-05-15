@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 
 const FadeIn = props =>{
     useEffect(() => {
-        Aos.init({duration:2500});
+        Aos.init({duration:2500,once:true});
     }, []);
     return(
         <div data-aos="zoom-in">
