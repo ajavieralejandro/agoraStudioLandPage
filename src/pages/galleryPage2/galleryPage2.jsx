@@ -5,12 +5,12 @@ import Wrapper from "../../components/Wrapper/wrapper";
 import img1 from '../../img/parallax.webp';
 import Grid from '@mui/material/Grid';
 import { Container } from "@mui/material";
-import Img1 from '../../img/img1.png';
-import Img2 from '../../img/img2.png';
-import Img3 from '../../img/img3.png';
-import Img4 from '../../img/img4.jpeg';
-import Img5 from '../../img/img5.png';
-import Img6 from '../../img/img6.png';
+import Img1 from '../../img/img1.webp';
+import Img2 from '../../img/img2.webp';
+import Img3 from '../../img/img3.webp';
+import Img4 from '../../img/img4.webp';
+import Img5 from '../../img/img5.webp';
+import Img6 from '../../img/img6.webp';
 
 
 import GalleryCard from '../../components/galleryCard/galleryCard';

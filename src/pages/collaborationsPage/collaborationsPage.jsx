@@ -17,7 +17,7 @@ import img6 from '../../img/logos/img6.png';
 
 
 const StyledImg = styled.img`
-    width : 180px;
+    width : 150px;
     height : auto;
     padding : 2%;
 `

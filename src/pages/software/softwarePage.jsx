@@ -31,8 +31,8 @@ const ImgWrap = styled(Paper)`
 
 const WrapperImg = styled.div`
   margin : 2em;
-  min-width : 300px;
-  min-height : 150px;
+  min-width : 200px;
+  min-height : 100px;
 `
 
 const StyledH1 = styled.h1`
@@ -72,7 +72,7 @@ const SoftwarePage = () => {
     effect="blur"
     src={item.img}
     height="auto"
-    width="300px" />
+    width="200px" />
                 </WrapperImg>
 
             )

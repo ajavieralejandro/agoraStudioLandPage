@@ -22,7 +22,7 @@ const StyledPaper = styled.div`
 font-family: 'Source Code Pro', monospace;
 
   border-radius:15px;
-  font-size : 24px;
+  font-size : 22px;
   background : transparent;
   text-align: justify;
     text-justify: inter-word;

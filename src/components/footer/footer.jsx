@@ -16,7 +16,7 @@ background: white;
 `
 
 const StyledAppBar = styled(AppBar)`
-    background :#558BAD; 
+    background :black;
 `
 
 const Footer = () =>{

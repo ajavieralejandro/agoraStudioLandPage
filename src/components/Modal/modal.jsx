@@ -103,7 +103,6 @@ const ImageModal = ({visibility,handleClose}) =>{
        <CloseIcon />
        </StyledIconButton>
 
-    <Selector />
 <Wrapper>
 
 

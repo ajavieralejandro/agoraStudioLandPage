@@ -16,6 +16,7 @@ import CollaborationsPage from './pages/collaborationsPage/collaborationsPage';
 import Video from './components/Video/Video';
 import SoftwarePage from './pages/software/softwarePage';
 import GalleryPage from './pages/galerryPage/galleryPage';
+import GalleryPage2 from './pages/galleryPage2/galleryPage2';
 
 
 
@@ -45,6 +46,8 @@ function App() {
       <Navbar />
       <Video />
       <Wrapper>
+      <Container>
+
       <AboutPage />
       <TeamPage data={team} />
       <SoftwarePage />
@@ -53,6 +56,7 @@ function App() {
 
 
       <ContactPage />
+      </Container>
 
       <Footer />
       </Wrapper>

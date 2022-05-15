@@ -34,17 +34,13 @@ const images = [
     title: 'Fashion',
     width: '30%',
   },
-  {
-    url: Img4,
-    title: 'Biomodels',
-    width: '40%',
-  }
+
 ];
 
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
-  height: 250,
+  height: 220,
   [theme.breakpoints.down('sm')]: {
     width: '100% !important', // Overrides inline-style
     height: 100,
